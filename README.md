@@ -54,7 +54,7 @@ Funcionalidades:
   - [Carrinho](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/carrinho.png): comprar produto(s);
   - [Editar perfil](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/editar%20perfil%20(cliente).png): alterar informações próprias.
 
-Uma observação a ser feita é que todas as telas levam à página inicial e à respectiva área de usuário, porém isso não foi incluído no diagrama para não poluir a imagem.
+Uma observação a ser feita: todas as telas levam à página inicial e à respectiva área de usuário, porém isso não foi incluído no diagrama para não poluir a imagem.
 
 ## 2.2 Testes
 
