@@ -47,6 +47,10 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, im
 
 
 
+### 2.3 Comentários
+
+
+
 # 3. Problemas
 
 
