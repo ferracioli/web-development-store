@@ -37,11 +37,31 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, im
 
 ![Diagrama](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/diagrama.png)
 
+Funcionalidades:
+* [Página inicial](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/p%C3%A1gina%20inicial.png): descrição do site;
+* [Entrar](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/entrar.png): fazer login;
+* [Cadastrar](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/cadastrar.png): fazer cadastro;
+* Administrador:
+  - [Área de usuário](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/%C3%A1rea%20de%20usu%C3%A1rio%20(admin).png): escolher ação;
+  - [Buscar produtos](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/buscar%20produtos%20(admin).png): procurar e excluir produtos;
+  - [Produto](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/produto%20(admin).png): ver e editar produto (imagem, *spotlight* e informações);
+  - [Adicionar produto](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/adicionar%20produto.png): criar produto;
+  - [Editar perfil](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/editar%20perfil%20(admin).png): alterar informações próprias;
+  - [Buscar usuários](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/buscar%20usu%C3%A1rios.png): ver, editar (conceder ou remover permissão de administrador) e excluir usuários.
+ * Cliente:
+  - [Área de usuário](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/%C3%A1rea%20de%20usu%C3%A1rio%20(cliente).png): escolher ação;
+  - [Buscar produtos](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/buscar%20produtos%20(cliente).png): procurar e adicionar produtos ao carrinho;
+  - [Produto](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/produto%20(cliente).png): ver (imagem, *spotlight* e informações) e adicionar produto ao carrinho;
+  - [Carrinho](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/carrinho.png): comprar produto(s);
+  - [Editar perfil](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/editar%20perfil%20(cliente).png): alterar informações próprias.
+
+Uma observação a ser feita é que todas as telas levam à página inicial e à respectiva área de usuário, porém isso não foi incluído no diagrama para não poluir a imagem.
+
 ## 2.2 Testes
 
 ### 2.2.1 Plano de teste
 
-
+Pretende-se usar o [Postman](https://www.postman.com/) para testes de *backend*.
 
 ### 2.2.2 Resultados
 
@@ -49,11 +69,11 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, im
 
 ### 2.3 Comentários
 
-
+Pretende-se implementar ainda um carrossel na página inicial, para mostrar mais de uma imagem, confirmação de compra por e-mail e o *spotlight*.
 
 # 3. Problemas
 
-
+Por ter sido cobrado somente o HTML5 e o CSS3, não foi possível implementar o carrossel de imagens na página inicial ou o estilo de aplicativo de página única, que são feitos através de JavaScript. Ademais, o [Marvel](https://marvelapp.com/) não é muito intuitivo nem gera o código do site modelado.
 
 # 4. Conclusões
 
