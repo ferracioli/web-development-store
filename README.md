@@ -35,7 +35,7 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, im
 
 ## 2.1 Navegação
 
-![Diagrama](frotend/img/diagrama.png)
+![Diagrama](web-development-store/frontend/img/diagrama.png)
 
 ## 2.2 Testes
 
