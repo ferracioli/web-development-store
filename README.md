@@ -27,10 +27,6 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, im
 
 
 
-## 1.3 Como usar
-
-
-
 # 2. Descrição do Software
 
 ## 2.1 Navegação
