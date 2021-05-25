@@ -48,7 +48,7 @@ Funcionalidades:
   - [Adicionar produto](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/adicionar%20produto.png): criar produto;
   - [Editar perfil](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/editar%20perfil%20(admin).png): alterar informações próprias;
   - [Buscar usuários](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/buscar%20usu%C3%A1rios.png): ver, editar (conceder ou remover permissão de administrador) e excluir usuários.
- * Cliente:
+* Cliente:
   - [Área de usuário](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/%C3%A1rea%20de%20usu%C3%A1rio%20(cliente).png): escolher ação;
   - [Buscar produtos](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/buscar%20produtos%20(cliente).png): procurar e adicionar produtos ao carrinho;
   - [Produto](https://github.com/gabriel3224/web-development-store/blob/main/frontend/img/telas/produto%20(cliente).png): ver (imagem, *spotlight* e informações) e adicionar produto ao carrinho;
