@@ -21,7 +21,7 @@ O site possui 2 (dois) tipos de usuários:
 * Administrador (Admin): responsável por registrar/gerenciar administradores, usuários e *skins*. Tem registrado: nome, id, e-mail, telefone e senha (o id e a senha são **admin**);
 * Cliente: usuário padrão, que acessa o site para comprar *skins*. Tem registrado: nome, id, e-mail, endereço, telefone e senha.
 
-As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, imagem, *spotlight* (animação de como fica no jogo, sendo essa a funcionalidade específica do site), descrição, quantidades vendida e em estoque e preço.
+As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertence, imagem, *spotlight* (animação de como fica no jogo, sendo essa a funcionalidade específica do site), descrição, quantidades vendida e em estoque e preço. Por fim, todas as informações dos usuários (administradores e clientes) e dos produtos ficam salvas no servidor.
 
 ## 1.2 Como instalar
 
