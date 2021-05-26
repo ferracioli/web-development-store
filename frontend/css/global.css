@@ -137,7 +137,10 @@ body {
 #page-body {
     width: 100vw;
     background-color: var(--black);
+    /* O conteúdo da loja ocupará no mínimo o espaço que falta para preencher a tela */
+    min-height: calc(100vh - 60px - 80px);
 }
+
 h1, h2 {
     color: var(--cyberpunk-blue);
 }
