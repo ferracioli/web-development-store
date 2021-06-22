@@ -1,0 +1,40 @@
+.topnav input[type=text] {
+font-size: 17px;
+border: none;
+}
+
+.search-container button {
+background: #ddd;
+font-size: 17px;
+border: none;
+cursor: pointer;
+}
+
+.search-button img {
+width: 20px;
+height: 20px;
+object-fit: cover;
+}
+
+.search-container{
+    top: 3px;
+    font-size: 18px;
+}
+
+
+#items {
+    width: 60%;
+    background-color: #2e363f;
+    border-radius: 12px;
+  }
+
+.products {
+    margin-right:auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 90%;
+    background-color: gray;
+    border-radius: 12px;
+}
