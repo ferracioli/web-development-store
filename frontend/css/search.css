@@ -33,8 +33,48 @@ object-fit: cover;
     margin-left: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    height: 200px;
+    height: 150px;
     width: 90%;
     background-color: gray;
     border-radius: 12px;
 }
+
+
+.price {
+    font-size: 500%;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    font-size: 18px;
+  }
+
+
+
+.products img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    height: 120px;
+
+}
+
+
+.products button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    float: right;
+    margin-left: auto;
+    border-radius: 12px;
+    height: 40px;
+    width: 130px;
+
+
+}
+
+.products p {
+    text-align: justify;
+}
+
