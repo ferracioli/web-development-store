@@ -70,11 +70,24 @@ object-fit: cover;
     border-radius: 12px;
     height: 40px;
     width: 130px;
+    font-weight: bold;
 
 
 }
 
 .products p {
     text-align: justify;
+    padding: 10px;
 }
+
+
+
+.spot_edit{
+    background-color: #555;
+}
+
+.add_exclude{
+    background-color: red;
+}
+
 
