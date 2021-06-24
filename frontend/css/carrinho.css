@@ -5,6 +5,17 @@ border: none;
 
 
 
+@media only screen and (max-width: 400px) {
+	#fodace {
+        background-color: pink;
+		width: 120px;
+		height: 150px;
+		margin: 5px;
+		padding:15px 10px;
+	}
+}
+
+
 #items {
     width: 60%;
     height: 800px;
@@ -25,13 +36,10 @@ border: none;
 }
 
 
-#items img {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 40px;
-    height: 150px;
-    padding: 10px;
-}
+
+
+
+
 
 .products {
     margin-right:auto;
@@ -44,8 +52,14 @@ border: none;
 }
 
 
+#icon {
+    height: 70px;
+    margin-left: 10px;
+}
 
-
+.products img {
+    height: 200px;
+}
 
 
 
