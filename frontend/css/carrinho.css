@@ -1,0 +1,52 @@
+.topnav input[type=text] {
+font-size: 17px;
+border: none;
+}
+
+
+
+#items {
+    width: 60%;
+    height: 800px;
+    background-color:white;
+}
+
+
+#items button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    float: right;
+    margin-left: auto;
+    border-radius: 12px;
+    height: 40px;
+    width: 130px;
+    font-weight: bold;
+}
+
+
+#items img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    height: 150px;
+    padding: 10px;
+}
+
+.products {
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    height: 80px;
+    width: 100%;
+    background-color: gray;
+
+}
+
+
+
+
+
+
+
+
