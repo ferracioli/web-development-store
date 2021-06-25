@@ -91,3 +91,11 @@ object-fit: cover;
 }
 
 
+.filtros {
+    padding:5px;
+}
+
+
+#ferramentasDePesquisa{
+    margin-left: 3px;
+}

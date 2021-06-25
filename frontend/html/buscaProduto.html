@@ -44,13 +44,29 @@
                 </form>
               </div>
             </div>
+            <h2>filtrar por</h2>
+            <select name="filterBy" class="filtros">
+                <optgroup label="filtrar por">
+                <option value = "mais recente" selected>mais vendido</option>    
+                <option value = "menor preço">menor preço</option>
+                <option value = "maoio preço">maoio preço</option>
+                </optgroup>
+            </select>
+            <select name="Jogo"  class="filtros">
+                <optgroup label="Jogo">
+                <option value = "League of Legends" selected>League of Legends</option>    
+                <option value = "Valorant" selected>Valorant</option>
+                <option value = "Among Us">Among Us</option>
+                <option value = "Overwatch">Overwatch</option>
+                </optgroup>
+            </select>
+        
             <div id = "items"> 
-
                 <div class = "products"> 
                     <div class=price>R$12,99</div>
                     <img src="../img/products/anivia.png">
                     <button type="button" class = "add_exclude" >Adcionar ao carrinho</button>
-                    <button type="button" class = "spot_edit" >Spotlight</button>
+                    <button type="button" class = "spot_edit" onclick="window.location.href='spotlight.html'">Spotlight</button>
                     <p>Nome: Anivia caçadora de Noxus <br> Jogo: League of Legends <br> Disponíveis: 3, Vendidas: 9 <br> Anivia é um espírito alado e benevolente que suporta infinitos ciclos de vida, morte e renascimento para proteger Freljord. </p>
                 </div>
 
@@ -58,16 +74,16 @@
                     <div class=price>R$1,89</div>
                     <img src="../img/products/aventureiro.png">
                     <button type="button" class = "add_exclude">Adcionar ao carrinho</button>
-                    <button type="button" class = "spot_edit">Spotlight</button>
-                    <p>Nome: Roupa de aventureiro <br> Jogo: Among US <br> Disponíveis: 63, Vendidas: 22 <br> Conhecida como sua melhor pacificadora, Caitlyn também é a melhor escolha de Piltover para livrar a cidade de seus elementos criminosos elusivos.</p>
+                    <button type="button" class = "spot_edit" onclick="window.location.href='spotlight.html'">Spotlight</button>
+                    <p>Nome: Roupa de aventureiro <br> Jogo: Among US <br> Disponíveis: 63, Vendidas: 22 <br></p>
                 </div>
 
                 <div class = "products">
                     <div class=price>R$99,99</div>
                     <img src="../img/products/cait flip.jpg">
                     <button type="button" class = "add_exclude">Adcionar ao carrinho</button>
-                    <button type="button" class = "spot_edit">Spotlight</button>
-                    <p>Nome: Caitlyn Fliperama <br> Jogo: League of Legends <br> Disponíveis: 1, Vendidas: 99 <br> </p>
+                    <button type="button" class = "spot_edit" onclick="window.location.href='spotlight.html'">Spotlight</button>
+                    <p>Nome: Caitlyn Fliperama <br> Jogo: League of Legends <br> Disponíveis: 1, Vendidas: 99 <br> Conhecida como sua melhor pacificadora, Caitlyn também é a melhor escolha de Piltover para livrar a cidade de seus elementos criminosos elusivos. </p>
                 </div>
 
             </div>
