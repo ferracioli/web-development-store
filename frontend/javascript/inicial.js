@@ -34,3 +34,13 @@ function mostraSlide(salto) {
     // Deixa visível apenas o slide escolhido
     slides[slide_atual - 1].style.display = "block";
 }
+
+
+
+click(function(){
+    var id=$('#userNameInput').val();
+    var new_url=  "area"+id+".html";
+    console.log("OIIIIIIIIIIIIIIII")
+    console.log(new_url)
+    window.open(new_url);
+ });

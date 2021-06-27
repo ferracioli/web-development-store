@@ -14,6 +14,8 @@
         <link rel="stylesheet" type="text/css" href="../css/global.css">
 		<link rel="stylesheet" type="text/css" href="../css/form.css">
 
+        <script src="javascript/inicial.js"></script>
+        
 	</head>
 
 	<body>
@@ -33,7 +35,7 @@
 				<h1>Faça seu Login!</h1>
                 <form id="login-form" action="#" method="POST">
                     <div class="vertical center">
-                        <label class="text">Nome de Usuário</label>
+                        <input type="text" class="text" id="userNameInput">Nome de Usuário</input>
                         <input name="username" class="text" type="text" title="Username" placeholder="seu username">
                         <label class="text">Senha</label>
                         <input name="password" class="text" type="password" title="password" placeholder="Sua senha">
@@ -43,7 +45,7 @@
                         <!--<button type="submit" class="bt-moderadores texto branco">Login</button>-->
                     </div>
                 </form>
-                <button onclick="window.location.href='areaCliente.html'">Login</button>
+                <button id = "loginButton" onclick= click()>Login</button>
                 <a href="cadastroCliente.html" class=simple-button>Ainda não é nosso cliente?</a>
 			</div>
 
@@ -53,7 +55,10 @@
                 <a href="../index.html" class="link gold">Barão das Skins</a>
                 <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
             </footer>
-        
         </div>
 	</body>
 </html>
+
+
+
+
