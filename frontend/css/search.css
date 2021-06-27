@@ -76,6 +76,7 @@ object-fit: cover;
 }
 
 .products p {
+    position: absolute;
     text-align: justify;
     padding: 10px;
 }
