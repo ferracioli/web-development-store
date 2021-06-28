@@ -26,7 +26,9 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertencem, i
 ## 1.2 Como instalar
 
 1. Fazer o download do projeto (através do botão _Code_);
-2. Clicar duas vezes no arquivo **index.html**, dentro da pasta **frontend**.
+2. Extrair os arquivos da pasta compactada;
+3. Entrar na pasta extraída (**web-development-store-main**);
+4. Dentro da pasta **frontend**, clicar duas vezes no arquivo **index.html**.
 
 O uso é intuitivo, porém o diagrama pode ser útil caso haja dificuldades na navegação (ver seção **Navegação**, em **Descrição do Software**).
 
