@@ -12,7 +12,6 @@ Paulo Henrique Sebastião de Moura - 10310471
 
 O presente projeto é um site de uma loja online que vende *skins* de diversos jogos. Àqueles que não sabem, *skins* são visuais alternativos a elementos de um jogo, podendo ser de personagens (como roupas) ou de itens (designs diferentes para armas, por exemplo). No caso, este site é exclusivo para compras de *skins* de personagens dos seguintes jogos:
 * Overwatch;
-* Fortnite;
 * League of Legends;
 * Valorant;
 * Among Us.
@@ -62,19 +61,21 @@ Uma observação a ser feita: todas as telas levam à página inicial e à respe
 
 ### 2.2.1 Plano de teste
 
-Pretende-se usar o [Postman](https://www.postman.com/) para testes de *backend*.
+Para o *backend*, foi testada cada uma das telas em três navegadores diferentes (Firefox, Google Chrome e Microsoft Edge), do formato máximo (visualização em computador) ao mínimo (uso em telefone celular).
+
+Para o *backend*, por sua vez, pretende-se usar o [Postman](https://www.postman.com/).
 
 ### 2.2.2 Resultados
 
-
+Foram detectados defeitos na estética (sobretudo no tocante à responsividade e ao uso otimizado da tela) e em pequenas funcionalidades (vide botões). Esses últimos foram todos reparados, enquanto dos primeiros sanou-se os mais gerais e comprometedores. De resto, o software atende ao esperado.
 
 ### 2.3 Comentários
 
-Pretende-se implementar ainda um carrossel na página inicial, para mostrar mais de uma imagem, confirmação de compra por e-mail e o *spotlight*.
+Pretende-se implementar ainda uma confirmação de compra por e-mail.
 
 # 3. Problemas
 
-Por ter sido cobrado somente o HTML5 e o CSS3, não foi possível implementar o carrossel de imagens na página inicial ou o estilo de aplicativo de página única, que são feitos através de JavaScript. Ademais, o [Marvel](https://marvelapp.com/) não é muito intuitivo nem gera o código do site modelado.
+O principal problema foi o [Marvel](https://marvelapp.com/) não ser muito intuitivo nem gerar o código do site modelado.
 
 # 4. Conclusões
 
