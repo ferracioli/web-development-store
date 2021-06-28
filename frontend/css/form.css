@@ -28,6 +28,11 @@ input[type=text], input[type=password], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+@media only screen and (min-width: 801px){
+	input[name="complement"] {
+		width: 520px;
+	}
+}
 button[type=submit], button {
   width: 100px;
   height: 42px;
@@ -37,4 +42,15 @@ button[type=submit], button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.responsive-form {
+  display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 800px){
+	.responsive-form {
+		flex-direction: column;
+	}
 }

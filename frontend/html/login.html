@@ -14,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="../css/global.css">
 		<link rel="stylesheet" type="text/css" href="../css/form.css">
 
-        <script src="javascript/inicial.js"></script>
+        <script src="../javascript/utilities.js"></script>
         
 	</head>
 
@@ -35,17 +35,17 @@
 				<h1>Faça seu Login!</h1>
                 <form id="login-form" action="#" method="POST">
                     <div class="vertical center">
-                        <input type="text" class="text" id="userNameInput">Nome de Usuário</input>
-                        <input name="username" class="text" type="text" title="Username" placeholder="seu username">
+                        <label class="text">Nome de Usuário</label>
+                        <input name="username" id="username" class="text" type="text" title="Username" placeholder="seu username">
                         <label class="text">Senha</label>
-                        <input name="password" class="text" type="password" title="password" placeholder="Sua senha">
+                        <input name="password" id="password" class="text" type="password" title="password" placeholder="Sua senha">
                         
                         <br>
                         <!-- O segundo botão é temporário, para que possa trocar de tela -->
                         <!--<button type="submit" class="bt-moderadores texto branco">Login</button>-->
                     </div>
                 </form>
-                <button id = "loginButton" onclick= click()>Login</button>
+                <button id ="loginButton" onclick="direcionaUsuario()">Login</button>
                 <a href="cadastroCliente.html" class=simple-button>Ainda não é nosso cliente?</a>
 			</div>
 

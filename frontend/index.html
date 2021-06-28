@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/inicial.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	
-	<script src="javascript/inicial.js"></script>
+	<script src="javascript/slider.js"></script>
 </head>
 <body>
 	<!-- Navbar da página -->
@@ -28,33 +28,34 @@
 	</nav>
 	<div class="vertical center">
 		<div id="page-body" class="vertical center">
-		<h1>A melhor loja de skins para jogos online do Brasil!</h1>
-		<div class="slider-imagens">
-			<div class="pagina-individual">
-				<img loading="lazy" onload="mostraSlide(slide_atual)" src="img/overwatch.jpeg">
-				<h2 loading="lazy" class= "vertical center">Overwatch</h2>
-			</div>
+			<h1>A melhor loja de skins para jogos online do Brasil!</h1>
+			<div class="slider-imagens">
+				<div class="pagina-individual">
+					<img loading="lazy" onload="mostraSlide(slide_atual)" src="img/overwatch.jpeg">
+					<h3 class= "center-title" style="margin:2px 0 10px 0;">Overwatch</h3>
+				</div>
 
-			<div class="pagina-individual">
-				<img loading="lazy" src="img/lol.jpeg">
-				<h2 loading="lazy" class= "vertical center">League of Legends</h2>
-			</div>
+				<div class="pagina-individual">
+					<img loading="lazy" src="img/lol.jpeg">
+					<h3 class= "center-title" style="margin:2px 0 10px 0;">League of Legends</h3>
+				</div>
 
-			<div class="pagina-individual">
-				<img loading="lazy" src="img/abong.jpeg">
-				<h2 loading="lazy" class= "vertical center">Among Us</h2>
-			</div>
-			
-			<div class="pagina-individual">
-				<img loading="lazy" src="img/valorant.jpeg">
-				<h2 loading="lazy" class= "vertical center">Valorant</h2>
-			</div>
+				<div class="pagina-individual">
+					<img loading="lazy" src="img/abong.jpeg">
+					<h3 class= "center-title" style="margin:2px 0 10px 0;">Among Us</h3>
+				</div>
+				
+				<div class="pagina-individual">
+					<img loading="lazy" src="img/valorant.jpeg">
+					<h3 class= "center-title" style="margin:2px 0 10px 0;">Valorant</h3>
+				</div>
 
 
-			<a class="seta-anterior" onclick="saltaSlide(-1)">&#10094;</a>
-			<a class="seta-proximo" onclick="saltaSlide(1)">&#10095;</a>
+				<a class="seta-anterior" onclick="saltaSlide(-1)">&#10094;</a>
+				<a class="seta-proximo" onclick="saltaSlide(1)">&#10095;</a>
+			</div>
 		</div>
-		</div>
+		
 		<footer id="footer" class="responsive-div">
 			<text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
 			<a href="index.html" class="link gold">Barão das Skins</a>

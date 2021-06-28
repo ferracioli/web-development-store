@@ -31,6 +31,7 @@ body {
 .black-background {background-color: var(--black);}
 .black {color: var(--gray);}
 .gold {color: var(--gold);}
+.white{color: white;}
 .cyberpunk-blue {color: var(--cyberpunk-blue);}
 .cyberpunk-purple {color: var(--cyberpunk-purple);}
 
@@ -50,6 +51,12 @@ body {
 .center {
     align-items: center;
     justify-content: center;
+}
+.end {
+    align-items: flex-end;
+}
+.evenly {
+    justify-content: space-evenly;
 }
 .space-between {
     align-items: center;
@@ -141,7 +148,7 @@ body {
     min-height: calc(100vh - 60px - 80px);
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: var(--cyberpunk-blue);
 }
 
@@ -149,3 +156,7 @@ h1, h2 {
     text-decoration: none;
     color: var(--cyberpunk-blue);
   }
+
+.space {margin: 10px;}
+.horizontal-space {margin: 0 10px;}
+.vertical-space {margin: 10px 0;}

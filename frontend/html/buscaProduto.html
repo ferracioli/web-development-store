@@ -32,62 +32,102 @@
         </nav>
 
         <div id="page-body" class="vertical center">
-            <div class="topnav">
-              <div class="search-container">
+
+            <div class="topnav search-container horizontal">
+                <div class="horizontal-space"></div>
                 <form action=#>
-                    <input type="text" placeholder="Digite o Produto" name="search">
+                    <input type="text" placeholder="Digite o nome do produto" name="search">
                     <button type="submit">
                         <i class="search-button">
                             <img src="../img/lupa.png"> 
                         </i> 
                     </button>  
                 </form>
-              </div>
             </div>
-            <select name="filterBy" class="filtros">
-                <optgroup label="filtrar por">
-                <option value = "mais recente" selected>mais vendido</option>    
-                <option value = "menor preço">menor preço</option>
-                <option value = "maoio preço">maoio preço</option>
-                </optgroup>
-            </select>
-            <select name="Jogo"  class="filtros">
-                <optgroup label="Jogo">
-                <option value = "League of Legends" selected>League of Legends</option>    
-                <option value = "Valorant" selected>Valorant</option>
-                <option value = "Among Us">Among Us</option>
-                <option value = "Overwatch">Overwatch</option>
-                </optgroup>
-            </select>
-        
-            <div id = "items"> 
-                <div class = "products"> <!-- dificuldade: posicionamento dos filtros e textos-->
-                    <div class=price>R$12,99</div>
-                    <img src="../img/products/anivia.png">
-                    <button type="button" class = "add_exclude" >Adcionar ao carrinho</button>
-                    <button type="button" class = "spot_edit" onclick="window.location.href='spotlight.html'">Spotlight</button>
-                    <p>Nome: Anivia caçadora de Noxus <br> Jogo: League of Legends <br> Disponíveis: 3, Vendidas: 9 <br> Anivia é um espírito alado e benevolente que suporta infinitos ciclos de vida, morte e renascimento para proteger Freljord. </p>
-                </div>
 
-                <div class = "products">
-                    <div class=price>R$1,89</div>
-                    <img src="../img/products/aventureiro.png">
-                    <button type="button" class = "add_exclude">Adcionar ao carrinho</button>
-                    <button type="button" class = "spot_edit" onclick="window.location.href='spotlight.html'">Spotlight</button>
-                    <p>Nome: Roupa de aventureiro <br> Jogo: Among US <br> Disponíveis: 63, Vendidas: 22 <br></p>
-                </div>
+            <div class="responsive-search">
 
-                <div class = "products">
-                    <div class=price>R$99,99</div>
-                    <img src="../img/products/cait flip.jpg">
-                    <button type="button" class = "add_exclude">Adcionar ao carrinho</button>
-                    <button type="button" class = "spot_edit" onclick="window.location.href='spotlight.html'">Spotlight</button>
-                    <p>Nome: Caitlyn Fliperama <br> Jogo: League of Legends <br> Disponíveis: 1, Vendidas: 99 <br> Conhecida como sua melhor pacificadora, Caitlyn também é a melhor escolha de Piltover para livrar a cidade de seus elementos criminosos elusivos. </p>
-                </div>
+                <form action=#>
+                    <div class="vertical">
+                        <text class="white text">Filtros</text>
+                        <div class="vertical-space"></div>
 
+                        <label for="ordem" class="white text">Ordenar por:</label>
+                        <select name="ordem" id="ordem">
+                            <option value="mais-recentes">Mais recentes</option>
+                            <option value="mais-antigos">Mais antigos</option>
+                        </select>
+
+                        <label for="jogo" class="white text">Jogo:</label>
+                        <select name="jogo" id="jogo">
+                            <option value="todos">Todos</option>
+                            <option value="among">Among us</option>
+                            <option value="overwatch">Overwatch</option>
+                            <option value="lol">LoL</option>
+                            <option value="valorant">Valorant</option>
+                        </select>
+
+                        <button>Filtrar</button>
+                    </div>
+                </form>
+
+                <div class="space"></div>
+
+                <div class="vertical" id="items"> 
+
+                    <div class="products responsive-user-crud">
+                        <div>
+                            <img src="../img/products/anivia.png"> 
+                        </div>
+                        <div class="vertical">
+                            <text class="text"><b>Nome:</b> Anivia caçadora de Noxus</text>
+                            <text class="text"><b>Jogo:</b> League of Legends</text>
+                            <text class="text"><b>Disponíveis:</b> 3</text>
+                            <text class="text">Anivia é um espírito alado e benevolente que suporta infinitos ciclos de vida, morte e renascimento para proteger Freljord.</text>
+                        </div>
+                        <div style="margin:0;" class="vertical end">
+                            <h2 class="text black" style="margin:10px 15px;">R$12,99</h2>
+                            <button onclick="onclick=window.location.href = 'carrinho.html';" class="buy_skin" >Comprar</button>
+                            <button onclick="alert('Produto adicionado ao carrinho com sucesso!');" class="spot_edit" >Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="products responsive-user-crud">
+                        <div>
+                            <img src="../img/products/aventureiro.png"> 
+                        </div>
+                        <div class="vertical">
+                            <text class="text"><b>Nome:</b> Roupa de aventureiro</text>
+                            <text class="text"><b>Jogo:</b> Among us</text>
+                            <text class="text"><b>Disponíveis:</b> 63</text>
+                            <text class="text">Originada diretamente dos filmes da época de ouro de Harrison Ford, essa skin te deixará muito mais estiloso entre seus amigos!</text>
+                        </div>
+                        <div style="margin:0;" class="vertical end">
+                            <h2 class="text black" style="margin:10px 15px;">R$1,89</h2>
+                            <button onclick="onclick=window.location.href = 'carrinho.html';" class="buy_skin" >Comprar</button>
+                            <button onclick="alert('Produto adicionado ao carrinho com sucesso!');" class="spot_edit" >Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="products responsive-user-crud">
+                        <div>
+                            <img src="../img/products/cait flip.jpg"> 
+                        </div>
+                        <div class="vertical">
+                            <text class="text"><b>Nome:</b> Caitlyn Fliperama</text>
+                            <text class="text"><b>Jogo:</b> League of Legends</text>
+                            <text class="text"><b>Disponíveis:</b> 1</text>
+                            <text class="text">Conhecida como sua melhor pacificadora, Caitlyn também é a melhor escolha de Piltover para livrar a cidade de seus elementos criminosos elusivos.</text>
+                        </div>
+                        <div style="margin:0;" class="vertical end">
+                            <h2 class="text black" style="margin:10px 15px;">R$99,99</h2>
+                            <button onclick="onclick=window.location.href = 'carrinho.html';" class="buy_skin" >Comprar</button>
+                            <button onclick="alert('Produto adicionado ao carrinho com sucesso!');" class="spot_edit" >Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>    
-
+            <div class="vertical-space"></div>
 
             <!-- Rodapé da página -->
             <footer id="footer" class="responsive-div">
@@ -95,7 +135,6 @@
                 <a href="../index.html" class="link gold">Barão das Skins</a>
                 <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
             </footer>
-        
         </div>
 	</body>
 </html>
