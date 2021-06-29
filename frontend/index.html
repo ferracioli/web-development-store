@@ -15,7 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="css/inicial.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	
-	<script src="javascript/slider.js"></script>
 </head>
 <body>
 	<!-- Navbar da página -->
@@ -29,6 +28,7 @@
 	<div class="vertical center">
 		<div id="page-body" class="vertical center">
 			<h1>A melhor loja de skins para jogos online do Brasil!</h1>
+			<!-- Slider que mostra os jogos com skins disponíveis na loja -->
 			<div class="slider-imagens">
 				<div class="pagina-individual">
 					<img loading="lazy" onload="mostraSlide(slide_atual)" src="img/overwatch.jpeg">
@@ -63,5 +63,6 @@
 		</footer>
 	</div>
 
-
+	<!-- OBS: o Javascript só é carregado no final pois precisa que todas as imagens já tenham sido carregadas -->
+	<script src="javascript/slider.js"></script>
 </body>

@@ -1,34 +1,51 @@
-.topnav input[type=text] {
-    font-size: 17px;
-    border: none;
-}
+/* Estilo da aba de busca */
+.search-container{
+    margin: 0;
+    padding: 0;
 
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.search-container input {
+    margin: 12px 10px 12px 0;
+}
 .search-container button {
-    background: #ddd;
-    font-size: 17px;
+    background-color: #ddd;
     border: none;
     cursor: pointer;
+    margin: 12px 10px 12px 0;
+    height: 35px;
 }
 
+.search-container a {
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    margin: 12px 10px 12px 0;
+    height: 35px;
+
+    width: 100px;
+    color: var(--black);
+    border-radius: 4px;
+}
+.search-container a img {
+    margin: 7px 0;
+}
+
+/* Ícones usados dentro da aba de busca */
 .search-button img {
     width: 20px;
     height: 20px;
+    margin: 0;
     object-fit: cover;
 }
 
-.search-container{
-    top: 3px;
-    font-size: 18px;
-}
-
+/* Estilo para o quadrado da listagem de usuários/produtos obtida a partir do banco */
 #items {
-    width: 100%;
     background-color: #2e363f;
     border-radius: 2px;
     padding: 30px 0;
-}
-
-#items {
     width: 60vw;
 }
 @media only screen and (max-width: 800px){
@@ -37,6 +54,7 @@
     }
 }
 
+/* Classe largamente utilizada para apresentar os registros de usuários/produtos individualmente */
 .products {
     margin: 10px 5%;
     width: 90%;
@@ -44,24 +62,12 @@
     background-color: #c1c1c1;
     border-radius: 8px;
 }
-
-.price {
-    font-size: 500%;
-    font-weight: bold;
-    color: black;
-    margin-top: 10px;
-    margin-right: 10px;
-    float: right;
-    font-size: 18px;
-  }
-
 .products img {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 15px;
     height: 120px;
 }
-
 .products button {
     margin: 10px 15px;
     border-radius: 6px;
@@ -70,46 +76,33 @@
     font-weight: bold;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
-
 .products div {
     margin: 10px;
 }
 
-.spot_edit {
-    background-color: #555;
-}
+/* Cores dos botões usados */
+.spot_edit {background-color: #555;}
+.add_exclude {background-color: red;}
+.buy_skin {background-color: #B2F77D;}
 
-.add_exclude {
-    background-color: red;
-}
-
-.buy_skin {
-    background-color: #B2F77D;
-}
-
-.filtros {
-    padding:5px;
-}
-
-#ferramentasDePesquisa{
-    margin-left: 3px;
-}
-
+/* Representa lado a lado as opções de filtro e a listagem do banco de dados */
 .responsive-search {
 	display:flex;
 	flex-direction :row;
 	align-items:flex-start;
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
 	.responsive-search {
 		flex-direction: column;
 	}
 }
 
+/* Impede que o texto da tag select não fique oculto */
 select {
     padding: 6px 10px;
 }
 
+/* Estilo usado amplamente nos momentos que necessitam de uma abordagem mais dinâmica e responsiva */
 .responsive-user-crud {
     display:flex;
     flex-direction: row;
@@ -123,6 +116,7 @@ select {
 	}
 }
 
+/* Distanciamento usado exclusivamente na visualização de um produto específico */
 .individual {
     padding: 10px;
 }

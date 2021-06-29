@@ -33,20 +33,22 @@
 
         <div id="page-body" class="vertical center">
 
-            <div class="topnav search-container horizontal">
+            <!-- Ferramenta de busca -->
+            <div class="search-container horizontal">
                 <div class="horizontal-space"></div>
                 <form action=#>
-                    <input type="text" placeholder="Digite o nome do produto" name="search">
-                    <button type="submit">
-                        <i class="search-button">
-                            <img src="../img/lupa.png"> 
-                        </i> 
-                    </button>  
+                    <div class="horizontal">
+                        <input type="text" placeholder="Digite o nome do produto" name="search">
+                        <button type="submit">
+                            <i class="search-button"><img src="../img/lupa.png"></i> 
+                        </button>  
+                    </div>
                 </form>
             </div>
 
             <div class="responsive-search">
 
+                <!-- Ferramenta de filtro-->
                 <form action=#>
                     <div class="vertical">
                         <text class="white text">Filtros</text>
@@ -75,6 +77,7 @@
 
                 <div class="vertical" id="items"> 
 
+                    <!-- Listagem dos produtos voltados para a venda -->
                     <div class="products responsive-user-crud">
                         <a href="spotlight.html">
                             <img src="../img/products/anivia.png"> 

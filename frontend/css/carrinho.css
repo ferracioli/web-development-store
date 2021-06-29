@@ -1,8 +1,4 @@
-.topnav input[type=text] {
-    font-size: 17px;
-    border: none;
-}
-
+/* Div que apresenta todos os itens do carrinho */
 #items {
     width: 70vw;
     background-color:white;
@@ -15,6 +11,7 @@
 	}
 }
 
+/* Botão de fechar compra */
 #items button {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -25,8 +22,11 @@
     height: 40px;
     width: 130px;
     font-weight: bold;
+    background-color: #B2F77D;
+    box-shadow: 1px 1px 3px grey;
 }
 
+/* Barra superior com o ícone do carrinho */
 .products {
     margin-right:auto;
     margin-left: auto;
@@ -37,33 +37,71 @@
 
 }
 
-#items button {
-    background-color: #B2F77D;
-    box-shadow: 1px 1px 3px grey;
-}
-
+/* Icone do carrinho */
 #icon {
     height: 70px;
     margin-left: 10px;
 }
 
+/* Estilo que cuida da quantia de produtos por linha no carrinho */
 .cart-wrap {
 	display:flex;
 	flex-wrap:wrap;
-	justify-content:space-around;
+    justify-content:center;
 }
 
+/* Estilo de cada produto dentro do carrinho */
 .cart-item {
     background-color: #c1c1c1;
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
 
-    margin: 10px 0;
+    margin: 10px;
 	border-radius: 12px;
 	box-shadow: 1px 1px 3px grey;
 }
 
 .cart-item img {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
+}
+
+/* O código abaixo é reutilizado de search.css (incluir o arquivo diretamente causa alguns conflitos de estilos) */
+.search-container{
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.search-container input {
+    margin: 12px 10px 12px 0;
+}
+.search-container button {
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    margin: 12px 10px 12px 0;
+    height: 35px;
+}
+.search-container a {
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    margin: 12px 10px 12px 0;
+    height: 35px;
+    width: 100px;
+    color: var(--black);
+    border-radius: 4px;
+}
+.search-container a img {
+    margin: 7px 0;
+}
+/* Ícones usados dentro da aba de busca */
+.search-button img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    object-fit: cover;
 }

@@ -30,7 +30,7 @@ input[type=text], input[type=password], select {
   box-sizing: border-box;
 }
 @media only screen and (min-width: 801px){
-	input[name="complement"] {
+	input[name="adress"] {
 		width: 520px;
 	}
 }
@@ -49,8 +49,7 @@ button[type=submit], button {
   display: flex;
     flex-direction: row;
 }
-
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
 	.responsive-form {
 		flex-direction: column;
 	}

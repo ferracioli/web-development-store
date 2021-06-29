@@ -1,27 +1,12 @@
+/* Define as cores usadas como variáveis, para facilitar */
 :root {
     --gold: #cd9f3f;
     --cyberpunk-blue: #23dbf5;
     --cyberpunk-purple: #40188f;
     --black: #031019;
 }
-
-.topnav input[type=text] {
-    font-size: 17px;
-    border: none;
-}
-    
-.search-container button {
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
-    
-.search-container{
-    top: 3px;
-    font-size: 18px;
-}
-    
+  
+/* Caixa usada para as telas nas quais o admin cria ou modifica produtos */
 #product {
     margin: 30px auto 10px auto;
     width: 70vw;
@@ -33,16 +18,8 @@
 		width: 80vw;
 	}
 }
-      
-.price {
-    font-size: 500%;
-    font-weight: bold;
-    color: black;
-    margin-top: 10px;
-    margin-right: 10px;
-    font-size: 18px;
-}
 
+/* Estilo do botão */
 #product button {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -55,10 +32,10 @@
     font-weight: bold;
 }
 
+/* Cores dos botões */
 .cancel {
     background-color: red;
 }
-
 .edit {
     background-color: #B2F77D;
 }

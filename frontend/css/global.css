@@ -20,6 +20,7 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
+    background-color:  var(--cyberpunk-purple);
 }
 
 /* Padroniza a fonte de todos os textos */
@@ -36,7 +37,7 @@ body {
 .cyberpunk-purple {color: var(--cyberpunk-purple);}
 
 /* Formatação de texto */
-.center-title {text-align: center;}
+.center-title, h1 {text-align: center;}
 .start-title {text-align: start;}
 
 /* Estilização fixa para todas as tags div (uso de flexbox) */
@@ -51,6 +52,9 @@ body {
 .center {
     align-items: center;
     justify-content: center;
+}
+.baseline {
+    align-items: baseline;
 }
 .end {
     align-items: flex-end;
@@ -80,7 +84,7 @@ body {
 	}
 }
 /* Texto que fica centralizado em telas pequenas */
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 800px){
 	.responsive-text {
         text-align: center;
     }
@@ -160,3 +164,8 @@ h1, h2, h3 {
 .space {margin: 10px;}
 .horizontal-space {margin: 0 10px;}
 .vertical-space {margin: 10px 0;}
+
+.no-hyperlink {
+    color: black;
+    text-decoration: none;
+}

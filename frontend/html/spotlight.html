@@ -30,12 +30,23 @@
         </nav>
 
         <div id="page-body" class="vertical center">
+            
+            <div class="start-title" style="width: 60vw;">
+                <a class="simple-button" href="javascript:history.go(-1)">Retornar</a>
+            </div>
+
             <div id="items"> 
+
+                <!-- Mostra as informações completas de um produto -->
                 <div class="responsive-user-crud individual">
                     <div class="vertical">
                         <img id="spotlightImage" src="../img/products/anivia.png">
 
-                        <!-- Tags usadas para a caixa de vídeo do spotlight: -->
+                        <!-- 
+                            Tags usadas para a caixa de vídeo do spotlight: 
+                            OBS: essa é a nossa funcionalidade especial, você clica no botão e aparece o vídeo do
+                            spotlight (apresentação da skin), e quando clica fora da caixa o vídeo fecha!
+                        -->
                         <div id="popup">
                             <video id="spotlightVideo" width="540" height="auto" controls>
                                 <source src="../media/AniviaNoxusHunter.mp4" type="video/mp4">
