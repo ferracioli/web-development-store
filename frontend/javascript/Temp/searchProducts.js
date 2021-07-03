@@ -1,5 +1,6 @@
 // Imports de Js devem ser feitos no início do arquivo
 import { products } from './products.js';
+import { getCookie } from './getCookie.js';
 
 function buildList(product) {
     // Cria as tags de HTML
@@ -62,10 +63,36 @@ function buildList(product) {
     price.setAttribute("Style", "margin: 10px 15px;");
     botao1.innerHTML = "Comprar";
     botao1.setAttribute("Class", "buy_skin");
-    botao1.setAttribute("Onclick", "onclick=window.location.href = 'carrinho.html';");
+    //botao1.setAttribute("Onclick", "onclick=window.location.href = 'carrinho.html';");
     botao2.innerHTML = "Adicionar ao carrinho";
     botao2.setAttribute("Class", "spot_edit");
-    botao2.setAttribute("Onclick", "alert('Produto adicionado ao carrinho com sucesso!');");
+    //botao2.setAttribute("Onclick", "alert('Produto adicionado ao carrinho com sucesso!');");
+
+    botao1.onclick=function(){
+        var json_cart = getCookie('cart');
+        var cart = JSON.parse(json_cart);
+        // Adiciona o id do novo produto
+        cart.push(product.id);
+        // Atualiza o cookie
+        var cart_json = JSON.stringify(cart);
+        var now = new Date();
+        now.setTime(now.getTime() + 1 * 3600 * 1000);
+        document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
+
+        window.location.href = "../html/carrinho.html";
+    }
+
+    botao2.onclick = function(){
+        var json_cart = getCookie('cart');
+        var cart = JSON.parse(json_cart);
+        // Adiciona o id do novo produto
+        cart.push(product.id);
+        // Atualiza o cookie
+        var cart_json = JSON.stringify(cart);
+        var now = new Date();
+        now.setTime(now.getTime() + 1 * 3600 * 1000);
+        document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
+    }
 };
 
 
