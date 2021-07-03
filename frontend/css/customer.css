@@ -29,6 +29,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+	text-align: center;
 }
 /* Para telas de tamanho entre 401 e 1000 pixels de largura */
 @media only screen and (max-width: 1000px) and (min-width: 401px) {
