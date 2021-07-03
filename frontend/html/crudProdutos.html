@@ -20,9 +20,9 @@
 	<body>
         <!-- Navbar da página -->
         <nav id="navbar">
-            <a href="../index.html" id="page-name" >Barão das Skins</a>
+            <a href="../../index.html" id="page-name" >Barão das Skins</a>
 			<div class="horizontal center">
-				<a href="../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
+				<a href="../../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
 				<a href="login.html" class="header-link responsive-text">ÁREA DE USUÁRIO</a>
 			</div>
         </nav>
@@ -31,114 +31,91 @@
 
             <!-- Ferramenta de busca e de inserção de produto -->
             <div class="search-container horizontal">
-                <form action=#>
+                <!--<form action=#>-->
                     <div class="horizontal">
                         <a onclick="window.location.href = 'criarProduto.html';" class="spot_edit" >
                             <div class="search-button horizontal center">
                                 <img src="../img/plus.png"> 
                             </div>
                         </a>
-                        <input type="text" placeholder="Digite o nome do produto" name="search">
-                        <button type="submit">
+                        <input id="search_bar" type="text" placeholder="Digite o nome do produto" name="search">
+                        <button type="submit" onclick="
+                            var temp = window.location.href;
+                            temp = temp.split('?', 1)[0];
+                            window.location.href = temp + '?name=' + document.getElementById('search_bar').value;
+                        ">
                             <i class="search-button"><img src="../img/lupa.png"></i> 
                         </button>  
                     </div>
-                </form>
+                <!--</form>-->
             </div>
 
             <div class="responsive-search">
 
                 <!-- Ferramenta de filtro -->
-                <form action=#>
+                <!--<form action=#>-->
                     <div class="vertical">
                         <text class="white text">Filtros</text>
                         <div class="vertical-space"></div>
 
                         <label for="ordem" class="white text">Ordenar por:</label>
                         <select name="ordem" id="ordem">
-                            <option value="mais-recentes">Mais recentes</option>
-                            <option value="mais-antigos">Mais antigos</option>
+                            <option value="old">Mais antigos</option>
+                            <option value="new">Mais recentes</option>
                         </select>
 
                         <label for="jogo" class="white text">Jogo:</label>
                         <select name="jogo" id="jogo">
-                            <option value="todos">Todos</option>
-                            <option value="among">Among us</option>
-                            <option value="overwatch">Overwatch</option>
-                            <option value="lol">LoL</option>
-                            <option value="valorant">Valorant</option>
+                            <option value="all">Todos</option>
+                            <option value="Among us">Among us</option>
+                            <option value="Overwatch">Overwatch</option>
+                            <option value="League of Legends">LoL</option>
+                            <option value="Valorant">Valorant</option>
                         </select>
 
-                        <button>Filtrar</button>
+                        <button onclick="
+                            var temp = window.location.href;
+
+                            if(temp.includes('datetime')) {
+                                // Se já usou esse filtro antes: apaga o antigo
+                                temp = temp.split('?', 1)[0];
+                                temp += '?';
+                            }
+                            else {
+                                // Se só tem o filtro de nome
+                                if(temp.includes('?'))
+                                    temp += '&';
+
+                                // Não tem nenhum filtro ainda
+                                else
+                                    temp += '?';
+                            }
+
+                            temp += 'datetime=' + document.getElementById('ordem').value;
+                            temp += '&game=' + document.getElementById('jogo').value;
+                            window.location.href = temp;
+                        ">Filtrar</button>
                     </div>
-                </form>
+                <!--</form>-->
 
                 <div class="space"></div>
 
                 <!-- Listagem dos produtos voltada para a manutenção da loja -->
                 <div class="vertical" id="items"> 
 
-                    <div class="products responsive-user-crud">
-                        <div>
-                            <img src="../img/products/anivia.png"> 
-                        </div>
-                        <div class="vertical">
-                            <text class="text"><b>Nome:</b> Anivia caçadora de Noxus</text>
-                            <text class="text"><b>Jogo:</b> League of Legends</text>
-                            <text class="text"><b>Disponíveis:</b> 3, <b>Vendidos:</b> 9</text>
-                            <text class="text">Anivia é um espírito alado e benevolente que suporta infinitos ciclos de vida, morte e renascimento para proteger Freljord.</text>
-                        </div>
-                        <div style="margin:0;" class="vertical end">
-                            <h2 class="text black" style="margin:10px 15px;">R$12,99</h2>
-                            <button onclick="alert('O produto será efetivamente removido na entrega 3!');" class="add_exclude" >Excluir</button>
-                            <button onclick="window.location.href = 'modificarProduto.html';" class="spot_edit" >Editar</button>
-                        </div>
-                    </div>
+                    <!-- Chama a função que usa a base de dados local (JSON) -->
+                    <script type="module" src="../javascript/Temp/productsCRUD.js"></script>    
 
-                    <div class="products responsive-user-crud">
-                        <div>
-                            <img src="../img/products/aventureiro.png"> 
-                        </div>
-                        <div class="vertical">
-                            <text class="text"><b>Nome:</b> Roupa de aventureiro</text>
-                            <text class="text"><b>Jogo:</b> Among us</text>
-                            <text class="text"><b>Disponíveis:</b> 63, <b>Vendidos:</b> 22</text>
-                            <text class="text">Originada diretamente dos filmes da época de ouro de Harrison Ford, essa skin te deixará muito mais estiloso entre seus amigos!</text>
-                        </div>
-                        <div style="margin:0;" class="vertical end">
-                            <h2 class="text black" style="margin:10px 15px;">R$1,89</h2>
-                            <button onclick="alert('O produto será efetivamente removido na entrega 3!');" class="add_exclude" >Excluir</button>
-                            <button onclick="window.location.href = 'modificarProduto.html';" class="spot_edit" >Editar</button>
-                        </div>
-                    </div>
-
-                    <div class="products responsive-user-crud">
-                        <div>
-                            <img src="../img/products/cait flip.jpg"> 
-                        </div>
-                        <div class="vertical">
-                            <text class="text"><b>Nome:</b> Caitlyn Fliperama</text>
-                            <text class="text"><b>Jogo:</b> League of Legends</text>
-                            <text class="text"><b>Disponíveis:</b> 1, <b>Vendidos:</b> 99</text>
-                            <text class="text">Conhecida como sua melhor pacificadora, Caitlyn também é a melhor escolha de Piltover para livrar a cidade de seus elementos criminosos elusivos.</text>
-                        </div>
-                        <div style="margin:0;" class="vertical end">
-                            <h2 class="text black" style="margin:10px 15px;">R$99,99</h2>
-                            <button onclick="alert('O produto será efetivamente removido na entrega 3!');" class="add_exclude" >Excluir</button>
-                            <button onclick="window.location.href = 'modificarProduto.html';" class="spot_edit" >Editar</button>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
             <div class="vertical-space"></div>
 
-            <!-- Rodapé da página -->
-            <footer id="footer" class="responsive-div">
-                <text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
-                <a href="../index.html" class="link gold">Barão das Skins</a>
-                <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
-            </footer>
         </div>
+        <!-- Rodapé da página -->
+        <footer id="footer" class="responsive-div">
+            <text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
+            <a href="../../index.html" class="link gold">Barão das Skins</a>
+            <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
+        </footer>
 	</body>
 </html>

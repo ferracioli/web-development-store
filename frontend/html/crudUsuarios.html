@@ -20,9 +20,9 @@
 	<body>
         <!-- Navbar da página -->
         <nav id="navbar">
-            <a href="../index.html" id="page-name" >Barão das Skins</a>
+            <a href="../../index.html" id="page-name" >Barão das Skins</a>
 			<div class="horizontal center">
-				<a href="../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
+				<a href="../../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
 				<a href="login.html" class="header-link responsive-text">ÁREA DE USUÁRIO</a>
 			</div>
         </nav>
@@ -32,70 +32,73 @@
                 <!-- Ferramenta de busca por nome -->
                 <div class="search-container horizontal">
                     <div class="horizontal-space"></div>
-                    <form action=#>
+                    <!--<form action=#>-->
                         <div class="horizontal">
-                            <input type="text" placeholder="Digite o nome do usuário" name="search">
-                            <button type="submit">
+                            <input id="search_bar" type="text" placeholder="Digite o nome do usuário" name="search">
+                            <button type="submit" onclick="
+                                var temp = window.location.href;
+                                temp = temp.split('?', 1)[0];
+                                window.location.href = temp + '?name=' + document.getElementById('search_bar').value;
+                            ">
                                 <i class="search-button"><img src="../img/lupa.png"></i> 
                             </button>  
                         </div>
-                    </form>
+                    <!--</form>-->
                 </div>
 
                 <div class="responsive-search">
 
                     <!-- Ferramenta de filtro -->
-                    <form action=#>
+                    <!--<form action=#>-->
                         <div class="vertical">
                             <text class="white text">Filtros</text>
                             <div class="vertical-space"></div>
 
                             <label for="ordem" class="white text">Ordenar por:</label>
                             <select name="ordem" id="ordem">
-                                <option value="mais-recentes">Mais recentes</option>
-                                <option value="mais-antigos">Mais antigos</option>
+                                <option value="old">Mais antigos</option>
+                                <option value="new">Mais recentes</option>
                             </select>
 
                             <label for="cargo" class="white text">Cargo:</label>
                             <select name="cargo" id="cargo">
-                                <option value="cliente">Cliente</option>
-                                <option value="administrador">Administrador</option>
+                                <option value="all">Todos</option>
+                                <option value="Cliente">Cliente</option>
+                                <option value="Admin">Administrador</option>
                             </select>
 
-                            <button>Filtrar</button>
+                            <button onclick="
+                                var temp = window.location.href;
+
+                                if(temp.includes('datetime')) {
+                                    // Se já usou esse filtro antes: apaga o antigo
+                                    temp = temp.split('?', 1)[0];
+                                    temp += '?';
+                                }
+                                else {
+                                    // Se só tem o filtro de nome
+                                    if(temp.includes('?'))
+                                        temp += '&';
+
+                                    // Não tem nenhum filtro ainda
+                                    else
+                                        temp += '?';
+                                }
+
+                                temp += 'datetime=' + document.getElementById('ordem').value;
+                                temp += '&cargo=' + document.getElementById('cargo').value;
+                                window.location.href = temp;
+                            ">Filtrar</button>
                         </div>
-                    </form>
+                    <!--</form>-->
 
                     <div class="space"></div>
 
                     <!-- Listagem dos usuários com o painel de opções -->
                     <div class="vertical" id="items"> 
 
-                        <div class="products responsive-user-crud"> 
-                            <div class="vertical">
-                                <text class="text"><b>Nome:</b> José Damasceno</text>
-                                <text class="text"><b>Nome de usuário:</b> Ze D</text>
-                                <text class="text"><b>Email:</b> ZeD@barao.com</text>
-                                <text class="text"><b>Função:</b> Admin</text>
-                            </div>
-                            <div style="margin:0;" class="responsive-user-crud">
-                                <button onclick="alert('O usuário será efetivamente removido na entrega 3!');" class="add_exclude" >Excluir</button>
-                                <button onclick="alert('O usuário será efetivamente rebaixado na entrega 3!');" class="spot_edit" >Tirar Admin</button>
-                            </div>
-                        </div>
-
-                        <div class="products responsive-user-crud">
-                            <div class="vertical">
-                                <text class="text"><b>Nome:</b> João Carlos Freitas</text>
-                                <text class="text"><b>Nome de usuário:</b> JoaozinhoChallenger</text>
-                                <text class="text"><b>Email:</b> Uga@uga.com</text>
-                                <text class="text"><b>Função:</b> Cliente</text>
-                            </div>
-                            <div style="margin:0;" class="responsive-user-crud">
-                                <button onclick="alert('O usuário será efetivamente removido na entrega 3!');" class="add_exclude" >Excluir</button>
-                                <button onclick="alert('O usuário será efetivamente promovido na entrega 3!');" class="spot_edit" >Tornar Admin</button>
-                            </div>
-                        </div>
+                        <!-- Chama a função que usa a base de dados local (JSON) -->
+                        <script type="module" src="../javascript/Temp/usersCRUD.js"></script>    
                         
                     </div>
                 </div>
@@ -104,7 +107,7 @@
             <!-- Rodapé da página -->
             <footer id="footer" class="responsive-div">
                 <text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
-                <a href="../index.html" class="link gold">Barão das Skins</a>
+                <a href="../../index.html" class="link gold">Barão das Skins</a>
                 <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
             </footer>
         

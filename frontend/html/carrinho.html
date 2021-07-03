@@ -24,9 +24,9 @@
 	<body>
         <!-- Navbar da página -->
         <nav id="navbar">
-            <a href="../index.html" id="page-name" >Barão das Skins</a>
+            <a href="../../index.html" id="page-name" >Barão das Skins</a>
 			<div class="horizontal center">
-				<a href="../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
+				<a href="../../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
 				<a href="login.html" class="header-link responsive-text">ÁREA DE USUÁRIO</a>
 			</div>
         </nav>
@@ -41,63 +41,18 @@
                 </div>
 
                 <!-- Lista todos os produtos que estão no carrinho -->
-                <div class="cart-wrap">
+                <div class="cart-wrap" id="items-list">
 
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
-                    <a href="spotlight.html" class="no-hyperlink">
-                        <div class="vertical center cart-item">
-                            <img src="../img/products/elderflame.png">
-                            <text>Elderflame</text>
-                            <text>R$314,00</text>
-                        </div>
-                    </a>
+                    <!-- Chama a função que usa a base de dados local (JSON) -->
+                    <script type="module" src="../javascript/Temp/carrinho.js"></script> 
+                    
                 </div>
-
+                
                 <!-- Formulário com os dados do cartão de crédito (não salva os dados por segurança) -->
                 <div id="payment">
                     <div class="vertical center">
                         <h2>Informações do pagamento</h2>
+                        <text class="text" id="price"></text><br>
                         <label class="text gold">Código do cartão de crédito:</label>
                         <input style="width:300px;" class="text" type="text" placeholder="XXXX XXXX XXXX XXXX">
 
@@ -132,7 +87,7 @@
         <!-- Rodapé da página -->
         <footer id="footer" class="responsive-div">
             <text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
-            <a href="../index.html" class="link gold">Barão das Skins</a>
+            <a href="../../index.html" class="link gold">Barão das Skins</a>
             <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
         </footer>
         

@@ -169,3 +169,7 @@ h1, h2, h3 {
     color: black;
     text-decoration: none;
 }
+
+#logout:hover {
+    cursor: pointer;
+}

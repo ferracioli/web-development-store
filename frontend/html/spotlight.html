@@ -22,9 +22,9 @@
 	<body>
         <!-- Navbar da página -->
         <nav id="navbar">
-            <a href="../index.html" id="page-name" >Barão das Skins</a>
+            <a href="../../index.html" id="page-name" >Barão das Skins</a>
 			<div class="horizontal center">
-				<a href="../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
+				<a href="../../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
 				<a href="login.html" class="header-link responsive-text">ÁREA DE USUÁRIO</a>
 			</div>
         </nav>
@@ -37,44 +37,8 @@
 
             <div id="items"> 
 
-                <!-- Mostra as informações completas de um produto -->
-                <div class="responsive-user-crud individual">
-                    <div class="vertical">
-                        <img id="spotlightImage" src="../img/products/anivia.png">
-
-                        <!-- 
-                            Tags usadas para a caixa de vídeo do spotlight: 
-                            OBS: essa é a nossa funcionalidade especial, você clica no botão e aparece o vídeo do
-                            spotlight (apresentação da skin), e quando clica fora da caixa o vídeo fecha!
-                        -->
-                        <div id="popup">
-                            <video id="spotlightVideo" width="540" height="auto" controls>
-                                <source src="../media/AniviaNoxusHunter.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                          
-                        <div id="fechaVideo" onClick="fechaVideo();"></div>
-                        <div>
-                            <a id="spotlightButton" onclick="abreVideo();">Ver spotlight</a>
-                        </div>
-                    </div>
-                    <div class="vertical">
-                        <h3> Anivia Caçadora de Noxus</h3>
-                        <h2>R$3.99</h2>
-                        <div id="spotlightOptions" class="horizontal">
-                            <button onclick="onclick=window.location.href = 'carrinho.html';" class="buy_skin" >Comprar</button>
-                            <button onclick="alert('Produto adicionado ao carrinho com sucesso!');" class="spot_edit" >Adicionar ao carrinho</button>
-                        </div>
-                    </div>
-                </div>
-                <div class = "products"> 
-                    <div class="vertical">
-                        <text class="text"><b>Nome:</b> Anivia caçadora de Noxus</text>
-                        <text class="text"><b>Jogo:</b> League of Legends</text>
-                        <text class="text"><b>Disponíveis:</b> 3</text>
-                        <text class="text">Anivia é um espírito alado e benevolente que suporta infinitos ciclos de vida, morte e renascimento para proteger Freljord.</text>
-                    </div>
-                </div>
+                <!-- Chama a função que usa a base de dados local (JSON) -->
+                <script type="module" src="../javascript/Temp/spotlightView.js"></script>  
 
             </div>
         </div>    
@@ -84,7 +48,7 @@
             <!-- Rodapé da página -->
             <footer id="footer" class="responsive-div">
                 <text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
-                <a href="../index.html" class="link gold">Barão das Skins</a>
+                <a href="../../index.html" class="link gold">Barão das Skins</a>
                 <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
             </footer>
         

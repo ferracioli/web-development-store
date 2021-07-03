@@ -18,9 +18,9 @@
 	<body>
         <!-- Navbar da página -->
         <nav id="navbar">
-            <a href="../index.html" id="page-name" >Barão das Skins</a>
+            <a href="../../index.html" id="page-name" >Barão das Skins</a>
 			<div class="horizontal center">
-				<a href="../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
+				<a href="../../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
 				<a href="login.html" class="header-link responsive-text">ÁREA DE USUÁRIO</a>
 			</div>
         </nav>
@@ -33,8 +33,10 @@
                 <!-- Painel de controle do administrador -->
                 <div class="vertical">
                     <div class="padding">
-                        <h1>Olá, Tim! Você é um administrador, o que deseja fazer?</h1>
-                        <a class="simple-button" href="../index.html">Sair</a>
+                        <script type="module" src="../javascript/Temp/areaUsuario.js"></script>
+                        <h1 id="greetings"></h1>
+                        <a class="simple-button" id="logout">Sair</a>
+                        <script type="module" src="../javascript/Temp/logout.js"></script>
                     </div>
                     <div id="actions" class="responsive-div">
                         <a href="crudProdutos.html">
@@ -49,7 +51,7 @@
                                 <text>Gerenciar usuarios</text>
                             </div>
                         </a>
-                        <a href="editarAdmin.html">
+                        <a href="editarPerfil.html">
                             <div class="card">
                                 <img class="icon black" src="../img/perfil.png">
                                 <text>Editar perfil</text>
@@ -62,34 +64,10 @@
                 <div id="sale" class="vertical center">
                     <h2>Skins mais vendidas</h2>
                     <div id="products" class="responsive-div">
-                        <a href="modificarProduto.html">
-                            <div class="card">
-                                <span>Among Us</span>
-                                <img src="../img/products/aventureiro.png">
-                                <text>Aventureiro<br>R$0,02</text>
-                            </div>
-                        </a>
-                        <a href="modificarProduto.html">
-                            <div class="card">
-                                <span>Valorant</span>
-                                <img src="../img/products/elderflame.png">
-                                <text>Elderflame<br>R$314,00</text>
-                            </div>
-                        </a>
-                        <a href="modificarProduto.html">
-                            <div class="card">
-                                <span>Lol</span>
-                                <img src="../img/products/anivia.png">
-                                <text>Anivia caçadora de N...<br>R$3,99</text>
-                            </div>
-                        </a>
-                        <a href="modificarProduto.html">
-                            <div class="card">
-                                <span>Lol</span>
-                                <img src="../img/products/viego.png">
-                                <text>Viego<br>R$12,95</text>
-                            </div>
-                        </a>
+                        
+                        <!-- Chama a função que usa a base de dados local (JSON) -->
+                        <script type="module" src="../javascript/Temp/mostSold.js"></script>  
+                        
                     </div>
                 </div>    
 			</div>
@@ -97,7 +75,7 @@
             <!-- Rodapé da página -->
             <footer id="footer" class="responsive-div">
                 <text class="cyberpunk-blue margin responsive-text">Fone: 4002-8922<br>SAC: nao@responderemos.com</text>
-                <a href="../index.html" class="link gold">Barão das Skins</a>
+                <a href="../../index.html" class="link gold">Barão das Skins</a>
                 <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
             </footer>
         
