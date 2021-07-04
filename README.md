@@ -17,8 +17,8 @@ O presente projeto é um site de uma loja online que vende *skins* de diversos j
 * Among Us.
 
 O site possui 2 (dois) tipos de usuários:
-* Administrador (Admin): responsável por registrar/gerenciar administradores, usuários e *skins*. Tem registrado: nome, id, e-mail, telefone e senha (o id e a senha são **admin**);
-* Cliente: usuário padrão, que acessa o site para comprar *skins*. Tem registrado: nome, id, e-mail, endereço, telefone e senha.
+* Administrador (Admin): responsável por registrar/gerenciar administradores, usuários e *skins*. Tem registrado: nome, nome de usuário, e-mail, telefone e senha (o nome de usuário e a senha são **admin**);
+* Cliente: usuário padrão, que acessa o site para comprar *skins*. Tem registrado: nome, nome de usuário, e-mail, telefone, endereço e senha (o nome de usuário e a senha são **cliente**).
 
 As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertencem, imagem, *spotlight* (animação de como ficam no jogo, sendo essa a funcionalidade específica do site), descrição, quantidades vendida e em estoque e preço. Por fim, todas as informações dos usuários (administradores e clientes) e dos produtos ficam salvas no servidor.
 
