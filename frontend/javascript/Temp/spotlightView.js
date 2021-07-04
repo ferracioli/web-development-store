@@ -32,10 +32,10 @@ function buildList(product) {
 
         "<div class = 'products'>"+
             "<div class='vertical'>"+
-                "<text class='text'><b>Nome:</b>"+product.nome+"</text>"+
-                "<text class='text'><b>Jogo:</b>"+product.jogo+"</text>"+
-                "<text class='text'><b>Disponíveis:</b>"+product.disponiveis+"</text>"+
-                "<text class='text'>"+product.descricao+"</text>"+
+                "<text class='text'><b>Nome: </b>"+product.nome+"</text>"+
+                "<text class='text'><b>Jogo: </b>"+product.jogo+"</text>"+
+                "<text class='text'><b>Disponíveis: </b>"+product.disponiveis+"</text>"+
+                "<text class='text'><b>Descrição:</b><br>"+product.descricao+"</text>"+
             "</div>"+
         "</div>"+
 
@@ -46,16 +46,18 @@ function buildList(product) {
     comprar.onclick=function(){
         var json_cart = getCookie('cart');
         var cart = JSON.parse(json_cart);
-        // Adiciona o id do novo produto
-        cart.push(id);
-        // Atualiza o cookie
-        var cart_json = JSON.stringify(cart);
-        var now = new Date();
-        now.setTime(now.getTime() + 1 * 3600 * 1000);
-        document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
+        if(cart.filter(x => x==id).length < product.disponiveis){
+            // Adiciona o id do novo produto
+            cart.push(id);
+            // Atualiza o cookie
+            var cart_json = JSON.stringify(cart);
+            var now = new Date();
+            now.setTime(now.getTime() + 1 * 3600 * 1000);
+            document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
 
-        document.getElementById("addCarrinho").value = "Adicionado";
-        console.log("Adicionado");
+            document.getElementById("addCarrinho").value = "Adicionado";
+            console.log("Adicionado");
+        }
 
         window.location.href = "../html/carrinho.html";
     }
@@ -63,19 +65,25 @@ function buildList(product) {
     // Botão de adicionar no carrinho
     var addCarrinho = document.getElementById("addCarrinho");
     addCarrinho.onclick = function(){
+        
         var json_cart = getCookie('cart');
         var cart = JSON.parse(json_cart);
         // Adiciona o id do novo produto
         console.log(cart);
-        cart.push(id);
-        // Atualiza o cookie
-        var cart_json = JSON.stringify(cart);
-        var now = new Date();
-        now.setTime(now.getTime() + 1 * 3600 * 1000);
-        document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
+        if(cart.filter(x => x==id).length < product.disponiveis){
+            cart.push(id);
+            // Atualiza o cookie
+            var cart_json = JSON.stringify(cart);
+            var now = new Date();
+            now.setTime(now.getTime() + 1 * 3600 * 1000);
+            document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
 
-        document.getElementById("addCarrinho").value = "Adicionado";
-        console.log("Adicionado");
+            document.getElementById("addCarrinho").value = "Adicionado";
+            console.log("Adicionado");
+            alert('Produto adicionado ao carrinho com sucesso!');
+        }
+        else
+            alert("Estoque insuficiente!");
     }
 }
 

@@ -26,7 +26,7 @@ As *skins*, por sua vez, são registradas com: nome, id, jogo a que pertencem, i
 
 1. Fazer o download do projeto (através do botão _Code_);
 2. Extrair os arquivos da pasta compactada;
-3. Abrir o terminal dentro da pasta extraída (**web-development-store-main**) e digitar o comando `python3 -m http.server 8000` (necessário Python 3 instalado);
+3. Abrir o terminal dentro da pasta extraída (**web-development-store-main**) e digitar o comando `python3 -m http.server 8000` (necessário Python 3 instalado). Se não funcionar, digite `python -m http.server 8000`;
 4. Na barra de endereços do navegador, digitar `localhost:8000`.
 
 O uso é intuitivo, porém o diagrama pode ser útil caso haja dificuldades na navegação (ver seção **Navegação**, em **Descrição do Software**).

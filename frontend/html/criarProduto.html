@@ -20,7 +20,7 @@
 	<body>
         <!-- Navbar da página -->
         <nav id="navbar">
-            <a href="../../index.html" id="page-name" >Barão das Skins</a>
+            <a href="../../index.html" id="page-name">Barão das Skins</a>
 			<div class="horizontal center">
 				<a href="../../index.html" class="header-link responsive-text">PÁGINA INICIAL</a>
 				<a href="login.html" class="header-link responsive-text">ÁREA DE USUÁRIO</a>
@@ -44,7 +44,7 @@
 
                         <div class="vertical">
                             <label class="text gold">Nome:</label>
-                            <input style="width:300px;" class="text" type="text" title="nome" placeholder="Insira o nome aqui">
+                            <input style="width:300px;" class="text" type="text" title="nome" placeholder="Insira o nome aqui" required>
                         </div>
                         <div class="vertical">
                             <label class="text gold">Jogo:</label>
@@ -57,15 +57,15 @@
                         </div>
                         <div class="vertical">
                             <label class="text gold">Descrição:</label>
-                            <textarea style="width:300px;" rows="5" cols="60" name="description" ></textarea>
+                            <textarea style="width:300px;" rows="5" cols="60" name="description" required></textarea>
                         </div>
                         <div class="vertical">
                             <label class="text gold">Estoque:</label>
-                            <input style="width:300px;" class="text" type="text" title="estoque" placeholder="ex: 2">
+                            <input style="width:300px;" class="text" type="number" min='1' step="1" title="estoque" placeholder="ex: 2" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required>
                         </div>
                         <div class="vertical">
-                            <label class="text gold">Preço:</label>
-                            <input style="width:300px;" class="text" type="text" title="preco"  placeholder="ex: 1.99">
+                            <label class="text gold">Preço (R$):</label>
+                            <input type="number" min="0.01" step="any" title="preco" placeholder="ex: 1.99" required>
                         </div>
                     </div>
 
@@ -73,9 +73,9 @@
             </form>
             
             <div class="horizontal">
-                <button onclick="window.location.href = 'crudProdutos.html';" class="cancel" >Cancelar</button>
+                <button onclick="window.location.href = 'crudProdutos.html';" class="cancel">Cancelar</button>
                 <div class="horizontal-space"></div>
-                <button onclick="alert('Produto cadastrado com sucesso');" class="edit" >Adicionar</button>
+                <button onclick="alert('Produto cadastrado com sucesso');" class="edit">Adicionar</button>
             </div>
         </div>    
 
@@ -85,6 +85,6 @@
             <a href="../../index.html" class="link gold">Barão das Skins</a>
             <text class="cyberpunk-blue margin responsive-text">Fuxiqueiros™ nenhum direito reservado</text>
         </footer>
-        
+        <script src="../javascript/slider.js"></script>    
 	</body>
 </html>

@@ -44,6 +44,7 @@
                 <div class="cart-wrap" id="items-list">
 
                     <!-- Chama a função que usa a base de dados local (JSON) -->
+                    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
                     <script type="module" src="../javascript/Temp/carrinho.js"></script> 
                     
                 </div>
@@ -54,19 +55,19 @@
                         <h2>Informações do pagamento</h2>
                         <text class="text" id="price"></text><br>
                         <label class="text gold">Código do cartão de crédito:</label>
-                        <input style="width:300px;" class="text" type="text" placeholder="XXXX XXXX XXXX XXXX">
+                        <input style="width:300px;" class="text" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
 
                         <label class="text gold">Validade do cartão de crédito:</label>
-                        <input style="width:300px;" class="text" type="text" placeholder="MM/AA">
+                        <input style="width:300px;" class="text" type="text" placeholder="MM/AA" required>
 
                         <label class="text gold">Código de segurança:</label>
-                        <input style="width:300px;" class="text" type="text" placeholder="abc">
+                        <input style="width:300px;" class="text" type="text" placeholder="abc" required>
                     </div>
                 </div>
 
                 <!-- Botão para finalizar a compra -->
-                <div>
-                    <button onclick="alert('Parabéns, sua compra foi realizada com sucesso! Em breve você receberá um email com as instruções para a aquisição das skins.');" >Finalizar compra</button>
+                <div id="finalizar">
+                    <button onclick="alert('Parabéns, sua compra foi realizada com sucesso! Em breve você receberá um email com as instruções para a aquisição das skins.');">Finalizar compra</button>
                 </div>
             </div>
 

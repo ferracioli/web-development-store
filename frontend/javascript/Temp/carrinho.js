@@ -29,7 +29,7 @@ function buildList(product) {
     div.setAttribute("Class", "vertical center cart-item");
     img.setAttribute("src", "../img/products/" + product.foto);
     text1.innerHTML = product.nome;
-    text2.innerHTML = "<br>R$ " + product.preco;
+    text2.innerHTML = "R$ " + product.preco.toFixed(2);
 };
 
 function findProduct(id) {
@@ -51,4 +51,19 @@ for(var i = 0; i < carrinho.length; i++) {
     buildList(carrinhoTemp);
 }
 
-document.getElementById("price").innerHTML = "Custo total: R$"+price.toFixed(2);
+document.getElementById("price").innerHTML = "Custo total: R$"+price.toFixed(2) + "<br><br>";
+
+// Apaga os produtos do carrinho após a compra
+function deleteAllCookies() {
+    var carrinho_json = getCookie('cart');
+    var carrinho = JSON.parse(carrinho_json);
+    carrinho = []
+    var cart_json = JSON.stringify(carrinho);
+    var now = new Date();
+    now.setTime(now.getTime() + 1 * 3600 * 1000);
+    document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
+    console.log("Comprado(s)");
+    location.reload();
+}
+
+$('#finalizar').click(deleteAllCookies);

@@ -23,7 +23,7 @@ function buildList(product) {
 
             "<div class='vertical'>"+
                 "<label class='text gold'>Nome:</label>"+
-                "<input style='width:300px;' class='text' type='text' title='nome' value='"+ product.nome +"'>"+
+                "<input style='width:300px;' class='text' type='text' title='nome' required value='"+ product.nome +"'>"+
             "</div>"+
             "<div class='vertical'>"+
                 "<label class='text gold'>Jogo:</label>"+
@@ -37,15 +37,15 @@ function buildList(product) {
             "</div>"+
             "<div class='vertical'>"+
                 "<label class='text gold'>Descrição:</label>"+
-                "<textarea style='width:300px;' rows='5' cols='60' name='description'>"+product.descricao+"</textarea>"+
+                "<textarea style='width:300px;' rows='5' cols='60' name='description' required>"+product.descricao+"</textarea>"+
             "</div>"+
             "<div class='vertical'>"+
                 "<label class='text gold'>Estoque:</label>"+
-                "<input style='width:300px;' class='text' type='text' title='estoque' value='"+product.disponiveis+"'>"+
+                "<input style='width:300px;' class='text' type='number' min='1' step='1' title='estoque' onkeypress='return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57' required value='"+product.disponiveis+"'>"+
             "</div>"+
             "<div class='vertical'>"+
                 "<label class='text gold'>Preço:</label>"+
-                "<input style='width:300px;' class='text' type='text' title='preco' value='"+product.preco.toFixed(2)+"'>"+
+                "<input type='number' min='0.01' step='any' title='preco' required value='"+product.preco.toFixed(2)+"'>"+
             "</div>"+
         "</div>";
 
