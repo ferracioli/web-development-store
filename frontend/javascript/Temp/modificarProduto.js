@@ -41,11 +41,11 @@ function buildList(product) {
             "</div>"+
             "<div class='vertical'>"+
                 "<label class='text gold'>Estoque:</label>"+
-                "<input style='width:300px;' class='text' type='text' title='estoque' value='"+product.vendidos+"'>"+
+                "<input style='width:300px;' class='text' type='text' title='estoque' value='"+product.disponiveis+"'>"+
             "</div>"+
             "<div class='vertical'>"+
                 "<label class='text gold'>Preço:</label>"+
-                "<input style='width:300px;' class='text' type='text' title='preco' value='"+product.preco+"'>"+
+                "<input style='width:300px;' class='text' type='text' title='preco' value='"+product.preco.toFixed(2)+"'>"+
             "</div>"+
         "</div>";
 

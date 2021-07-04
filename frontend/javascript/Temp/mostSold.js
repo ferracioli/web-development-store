@@ -27,7 +27,7 @@ function buildList(product) {
     div.setAttribute("Class", "card");
     span.innerHTML = product.jogo;
     img.setAttribute("src", "../img/products/" + product.foto);
-    text.innerHTML = product.nome+ "<br>R$ " + product.preco;
+    text.innerHTML = product.nome+ "<br>R$ " + product.preco.toFixed(2);
 
 };
 

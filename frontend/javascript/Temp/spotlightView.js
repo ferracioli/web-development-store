@@ -23,7 +23,7 @@ function buildList(product) {
 
         "<div class='vertical'>"+
             "<h3>"+product.nome+"</h3>"+
-            "<h2>R$"+product.preco+"</h2>"+
+            "<h2>R$"+product.preco.toFixed(2)+"</h2>"+
             "<div id='spotlightOptions' class='horizontal'>"+
                 "<button id='comprar' class='buy_skin' >Comprar</button>"+
                 "<button id='addCarrinho' class='spot_edit'>Adicionar ao carrinho</button>"+

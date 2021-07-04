@@ -56,7 +56,7 @@ function buildList(product) {
     texto2.innerHTML = "<b>Jogo:</b> " + product.jogo;
     texto3.innerHTML = "<b>Disponívels:</b> " + product.disponiveis + ", <b>Vendidos:</b> " + product.vendidos;
     texto4.innerHTML = "<b>Descrição:</b> " + product.descricao;
-    price.innerHTML = "R$" + product.preco;
+    price.innerHTML = "R$" + product.preco.toFixed(2);
     price.setAttribute("Class", "text black");
     price.setAttribute("Style", "margin: 10px 15px;");
     botao1.innerHTML = "Excluir";
