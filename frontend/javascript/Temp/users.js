@@ -16,6 +16,19 @@ export const users = [
     },
     {
         id: 2,
+        username: "cliente",
+        nome: "cliente",
+        cargo: "Cliente",
+        email: "cliente@usp.br",
+        logradouro: "Promissão, Avenida Rio Grande",
+        numero: "19",
+        complemento: "na roça",
+        telefone: "14 1234-5678",
+        hash_senha: "cliente",
+        data_cadastro: "2021-07-12"
+    },
+    {
+        id: 3,
         username: "bottinha",
         nome: "Botta",
         cargo: "Cliente",
@@ -28,7 +41,7 @@ export const users = [
         data_cadastro: "2020-01-04"
     },
     {
-        id: 3,
+        id: 4,
         username: "adam",
         nome: "Olavo",
         cargo: "Cliente",
@@ -41,7 +54,7 @@ export const users = [
         data_cadastro: "2020-02-04"
     },
     {
-        id: 4,
+        id: 5,
         username: "esmelindo",
         nome: "Esmerindo",
         cargo: "Cliente",
@@ -54,7 +67,7 @@ export const users = [
         data_cadastro: "2020-03-04"
     },
     {
-        id: 5,
+        id: 6,
         username: "BMO",
         nome: "Kevin",
         cargo: "Cliente",
@@ -65,18 +78,5 @@ export const users = [
         telefone: "11 1111-2222",
         hash_senha: "JNSJNWSWGSWU",
         data_cadastro: "2020-04-04"
-    },
-    {
-        id: 6,
-        username: "visitante",
-        nome: "visitante",
-        cargo: "Cliente",
-        email: "visitante@usp.br",
-        logradouro: "Promissão, Avenida Rio Grande",
-        numero: "19",
-        complemento: "na roça",
-        telefone: "14 1234-5678",
-        hash_senha: "visitante",
-        data_cadastro: "2021-07-12"
     }
 ];
