@@ -40,7 +40,7 @@ export const products = [
     {
         id: 4,
         nome: "Teemo Astronauta",
-        descricao: "Eu virei astronauta e fui pra outro planeta",
+        descricao: "Eu virei astronauta e fui pra outro planeta. Explore todo o universo com este equipamento do Teemo",
         jogo: "League of Legends",
         preco: 1.00,
         foto: "teemo.png",
@@ -52,7 +52,7 @@ export const products = [
     {
         id: 5,
         nome: "Ana Cybermédica",
-        descricao: "Skin exclusiva dos desafios semanais",
+        descricao: "Skin exclusiva dos desafios semanais. Como é algo semana, é uma skin muito rara",
         jogo: "Overwatch",
         preco: 10.25,
         foto: "ana.png",
