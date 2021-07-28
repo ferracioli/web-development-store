@@ -1,4 +1,4 @@
-// frontend/static/js/views/Dashboard.js
+// frontend/frontend/js/views/Dashboard.js
 import Views from "./Views.js";
 
 export default class extends Views {
@@ -20,19 +20,19 @@ export default class extends Views {
                 <div id="actions" class="responsive-div">
                     <a href="/buscaProduto">
                         <div class="card">
-                            <img class="icon" src="static/img/lupa.png">
+                            <img class="icon" src="frontend/img/lupa.png">
                             <text>Buscar skin</text>
                         </div>
                     </a>
                     <a href="/carrinho">
                         <div class="card">
-                            <img class="icon" src="static/img/carrinho.png">
+                            <img class="icon" src="frontend/img/carrinho.png">
                             <text>Meu carrinho</text>
                         </div>
                     </a>
                     <a href="/editarPerfil">
                         <div class="card">
-                            <img class="icon black" src="static/img/perfil.png">
+                            <img class="icon black" src="frontend/img/perfil.png">
                             <text>Editar perfil</text>
                         </div>
                     </a>
@@ -60,14 +60,14 @@ export default class extends Views {
         var css1 = document.createElement('link');
         css1.type = "text/css";
         css1.rel='stylesheet';
-        css1.href= "/static/css/global.css";
+        css1.href= "/frontend/css/global.css";
         document.getElementsByTagName('head')[0].appendChild(css1);
 
 
         var css2 = document.createElement('link');
         css2.type = "text/css";
         css2.rel='stylesheet';
-        css2.href= "/static/css/customer.css";
+        css2.href= "/frontend/css/customer.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
     }
 }

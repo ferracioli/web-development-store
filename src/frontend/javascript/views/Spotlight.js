@@ -26,21 +26,21 @@ export default class extends Views {
         var css1 = document.createElement('link');
         css1.type = "text/css";
         css1.rel='stylesheet';
-        css1.href= "/static/css/form.css";
+        css1.href= "/frontend/css/form.css";
         document.getElementsByTagName('head')[0].appendChild(css1);
 
 
         var css2 = document.createElement('link');
         css2.type = "text/css";
         css2.rel='stylesheet';
-        css2.href= "/static/css/search.css";
+        css2.href= "/frontend/css/search.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
 
 
         var css3 = document.createElement('link');
         css3.type = "text/css";
         css3.rel='stylesheet';
-        css3.href= "/static/css/spotlight.css";
+        css3.href= "/frontend/css/spotlight.css";
         document.getElementsByTagName('head')[0].appendChild(css3);
     }
 }

@@ -3,23 +3,27 @@ import Views from "./Views.js";
 export default class extends Views {
     constructor(params) {
         super(params);
-        this.setTitle("Buscar Produto");
+        this.setTitle("Gerenciar produtos");
     }
 
     async getHtml() {
         return `
-            <!-- Ferramenta de busca -->
+            <!-- Ferramenta de busca e de inserção de produto -->
             <div class="search-container horizontal">
-                <div class="horizontal-space"></div>
                 <!--<form action=#>-->
                     <div class="horizontal">
-                        <input type="text" id="search_bar" placeholder="Digite o nome do produto" name="search">
+                        <a onclick="window.location.href = 'criarProduto.html';" class="spot_edit" >
+                            <div class="search-button horizontal center">
+                                <img src="frontend/img/plus.png"> 
+                            </div>
+                        </a>
+                        <input id="search_bar" type="text" placeholder="Digite o nome do produto" name="search">
                         <button type="submit" onclick="
                             var temp = window.location.href;
                             temp = temp.split('?', 1)[0];
                             window.location.href = temp + '?name=' + document.getElementById('search_bar').value;
                         ">
-                            <i class="search-button"><img src="static/img/lupa.png"></i> 
+                            <i class="search-button"><img src="frontend/img/lupa.png"></i> 
                         </button>  
                     </div>
                 <!--</form>-->
@@ -27,7 +31,7 @@ export default class extends Views {
 
             <div class="responsive-search">
 
-                <!-- Ferramenta de filtro-->
+                <!-- Ferramenta de filtro -->
                 <!--<form action=#>-->
                     <div class="vertical">
                         <text class="white text">Filtros</text>
@@ -75,10 +79,11 @@ export default class extends Views {
 
                 <div class="space"></div>
 
+                <!-- Listagem dos produtos voltada para a manutenção da loja -->
                 <div class="vertical" id="items"> 
 
                     <!-- Chama a função que usa a base de dados local (JSON) -->
-                    <script type="module" src="../javascript/Temp/searchProducts.js"></script>  
+                    <script type="module" src="../javascript/Temp/productsCRUD.js"></script>    
 
                 </div>
             </div>
@@ -91,14 +96,14 @@ export default class extends Views {
         var css1 = document.createElement('link');
         css1.type = "text/css";
         css1.rel='stylesheet';
-        css1.href= "/static/css/form.css";
+        css1.href= "/frontend/css/form.css";
         document.getElementsByTagName('head')[0].appendChild(css1);
 
 
         var css2 = document.createElement('link');
         css2.type = "text/css";
         css2.rel='stylesheet';
-        css2.href= "/static/css/search.css";
+        css2.href= "/frontend/css/search.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
     }
 }

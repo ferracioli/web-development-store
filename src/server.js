@@ -15,8 +15,8 @@ class App {
     
     this.express.listen(8080, () => console.log(`API REST rodando na porta 8080`));
     
-    /* Ensure any requests prefixed with /static will serve our "frontend/static" directory */
-    this.express.use("/static", express.static(path.resolve(__dirname, "static")));
+    /* Ensure any requests prefixed with /frontend will serve our "frontend/frontend" directory */
+    this.express.use("/frontend", express.static(path.resolve(__dirname, "frontend")));
     
     /* Redirect all routes to our (soon to exist) "index.html" file */
     this.express.get("/*", (req, res) => {

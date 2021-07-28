@@ -29,7 +29,9 @@ function mostraSlide(salto) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-
+    
     // Deixa visível apenas o slide escolhido
     slides[slide_atual - 1].style.display = "block";
 }
+
+console.log("Slider incluido com sucesso");

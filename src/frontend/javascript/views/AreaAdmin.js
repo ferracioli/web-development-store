@@ -1,4 +1,4 @@
-// frontend/static/js/views/Dashboard.js
+// frontend/frontend/js/views/Dashboard.js
 import Views from "./Views.js";
 
 export default class extends Views {
@@ -20,19 +20,19 @@ export default class extends Views {
                 <div id="actions" class="responsive-div">
                     <a href="/crudProdutos">
                         <div class="card">
-                            <img class="icon" src="static/img/caixa.png">
+                            <img class="icon" src="frontend/img/caixa.png">
                             <text>Gerenciar Produtos</text>
                         </div>
                     </a>
                     <a href="/crudUsuarios">
                         <div class="card">
-                            <img class="icon" src="static/img/usuarios.png">
+                            <img class="icon" src="frontend/img/usuarios.png">
                             <text>Gerenciar usuarios</text>
                         </div>
                     </a>
                     <a href="/editarPerfil">
                         <div class="card">
-                            <img class="icon black" src="static/img/perfil.png">
+                            <img class="icon black" src="frontend/img/perfil.png">
                             <text>Editar perfil</text>
                         </div>
                     </a>
@@ -56,7 +56,7 @@ export default class extends Views {
         var css = document.createElement('link');
         css.type = "text/css";
         css.rel='stylesheet';
-        css.href= "/static/css/customer.css";
+        css.href= "/frontend/css/customer.css";
         document.getElementsByTagName('head')[0].appendChild(css);
     }
 }

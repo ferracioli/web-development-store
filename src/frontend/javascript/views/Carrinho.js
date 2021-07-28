@@ -10,7 +10,7 @@ export default class extends Views {
         return `
         <div id = "items">
                 <div class="products horizontal"> 
-                    <img id="icon" src="static/img/carrinho.png">
+                    <img id="icon" src="frontend/img/carrinho.png">
                     <div class="horizontal-space"></div>
                     <h1 class="black">Meu carrinho</h1>
                 </div>
@@ -55,14 +55,14 @@ export default class extends Views {
         var css1 = document.createElement('link');
         css1.type = "text/css";
         css1.rel='stylesheet';
-        css1.href= "/static/css/form.css";
+        css1.href= "/frontend/css/form.css";
         document.getElementsByTagName('head')[0].appendChild(css1);
 
 
         var css2 = document.createElement('link');
         css2.type = "text/css";
         css2.rel='stylesheet';
-        css2.href= "/static/css/carrinho.css";
+        css2.href= "/frontend/css/carrinho.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
     }
 }

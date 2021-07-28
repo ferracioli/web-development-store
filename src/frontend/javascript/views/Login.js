@@ -1,4 +1,4 @@
-// frontend/static/js/views/Dashboard.js
+// frontend/frontend/js/views/Dashboard.js
 import Views from "./Views.js";
 
 export default class extends Views {
@@ -8,6 +8,13 @@ export default class extends Views {
     }
 
     async getHtml() {
+
+        axios.get('/user').then(resp => {
+            var resposta = resp.data
+            console.log(resposta);
+            console.log(resposta[0]['username']);
+        });
+
         return `
             <h1>Faça seu Login!</h1>
                     
@@ -35,7 +42,7 @@ export default class extends Views {
         var css = document.createElement('link');
         css.type = "text/css";
         css.rel='stylesheet';
-        css.href= "/static/css/form.css";
+        css.href= "/frontend/css/form.css";
         document.getElementsByTagName('head')[0].appendChild(css);
     }
 }
