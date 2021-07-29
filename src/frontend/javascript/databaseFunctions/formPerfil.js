@@ -1,6 +1,14 @@
-// Imports de Js devem ser feitos no início do arquivo
-import { users } from './users.js';
-import { getCookie } from './getCookie.js';
+function getCookie(name) {
+    name = name + '=';
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.indexOf(name) == 0) {
+        return cookie.substring(name.length, cookie.length);
+        }
+    }
+}
 
 function buildList(user) {
     document.getElementById("registrer-form").innerHTML =
@@ -73,11 +81,14 @@ function buildList(user) {
     "</div>";
 }
 
-var id = getCookie('id');
+var username = getCookie('username');
 
-for(var i = users.length-1; i >= 0; i--) {
-    if(users[i].id == id) {
-        buildList(users[i]);
-        break;
+axios.get('/getUser').then(resp => {
+    resposta = resp.data;
+    for(var i=0; i < resposta.length; i++) {
+        if(resposta[i]['username'] == username) {
+            buildList(resposta[i]);
+            break;
+        }
     }
-}
+});

@@ -17,7 +17,7 @@ export default class extends Views {
                     <script type="module" src="../javascript/Temp/editarPerfil.js"></script>
 
                 </form>
-                <button onclick="window.location.href='areaCliente.html'">Editar</button>
+                <button id="botao-editar">Editar</button>
 			</div>
         `;
     }
@@ -36,5 +36,15 @@ export default class extends Views {
         css2.rel='stylesheet';
         css2.href= "/frontend/css/search.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/databaseFunctions/formPerfil.js";
+        document.body.appendChild(script);
+
+        var script2 = document.createElement('script');
+        script2.type='text/javascript';
+        script2.src= "/frontend/javascript/databaseFunctions/processaPerfil.js";
+        document.body.appendChild(script2);
     }
 }

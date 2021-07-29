@@ -13,8 +13,8 @@ class App {
     this.middlewares();
     this.routes();
     
-    this.express.listen(8080, () => console.log(`API REST rodando na porta 8080`));
-    
+    this.express.listen(8080, () => console.log(`API rodando na porta 8080`));
+
     /* Ensure any requests prefixed with /frontend will serve our "frontend/frontend" directory */
     this.express.use("/frontend", express.static(path.resolve(__dirname, "frontend")));
     
@@ -37,5 +37,3 @@ class App {
   }
 }
 const app = new App;
-
-//------

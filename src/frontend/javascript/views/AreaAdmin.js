@@ -1,6 +1,18 @@
 // frontend/frontend/js/views/Dashboard.js
 import Views from "./Views.js";
 
+function getCookie(name) {
+    name = name + '=';
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.indexOf(name) == 0) {
+        return cookie.substring(name.length, cookie.length);
+        }
+    }
+}
+
 export default class extends Views {
     constructor(params) {
         super(params);
@@ -8,12 +20,14 @@ export default class extends Views {
     }
 
     async getHtml() {
+        if(getCookie('username') == null || getCookie('cargo')=="Cliente")
+            window.location.href = "/";
         return `
             <!-- Painel de controle do administrador -->
             <div class="vertical">
                 <div class="padding">
                     <script type="module" src="../javascript/Temp/areaUsuario.js"></script>
-                    <h1 id="greetings"></h1>
+                    <h1 id="greetings">Olá, `+getCookie('username')+`</h1>
                     <a class="simple-button" id="logout">Sair</a>
                     <script type="module" src="../javascript/Temp/logout.js"></script>
                 </div>
@@ -58,5 +72,10 @@ export default class extends Views {
         css.rel='stylesheet';
         css.href= "/frontend/css/customer.css";
         document.getElementsByTagName('head')[0].appendChild(css);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/databaseFunctions/logout.js";
+        document.body.appendChild(script);
     }
 }

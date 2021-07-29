@@ -1,4 +1,5 @@
 // frontend/frontend/js/views/Dashboard.js
+//import { set } from "mongoose";
 import Views from "./Views.js";
 
 export default class extends Views {
@@ -9,17 +10,11 @@ export default class extends Views {
 
     async getHtml() {
 
-        axios.get('/user').then(resp => {
-            var resposta = resp.data
-            console.log(resposta);
-            console.log(resposta[0]['username']);
-        });
-
         return `
             <h1>Faça seu Login!</h1>
                     
             <!-- Formulário de login -->
-            <form id="login-form" action="#" method="POST">
+            <form id="login-form" method="POST">
                 <div class="vertical center">
                     <label class="text">Nome de Usuário</label>
                     <input name="username" id="username" class="text" type="text" title="Username" placeholder="seu username">
@@ -33,16 +28,20 @@ export default class extends Views {
             </form>
             
             <button id ="loginButton">Login</button><br>
-            <script type="module" src="../javascript/Temp/login.js"></script>
             <a href="/cadastro" class=simple-button>Ainda não é nosso cliente?</a>
         `;
     }
 
-    async executeViewScript() {
+    executeViewScript() {
         var css = document.createElement('link');
         css.type = "text/css";
         css.rel='stylesheet';
         css.href= "/frontend/css/form.css";
         document.getElementsByTagName('head')[0].appendChild(css);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/databaseFunctions/verificaLogin.js";
+        document.body.appendChild(script);
     }
 }
