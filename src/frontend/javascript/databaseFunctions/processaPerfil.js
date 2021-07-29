@@ -12,63 +12,76 @@ function getCookie(name) {
     }
 }
 
-function login() {
+async function processaPerfil() {
+    console.log("Entrou no processaPerfil");
 
-    // Usuário já logado, redireciona para a área de usuário
-    if(getCookie('cargo')) {
-        if(getCookie('cargo') == 'admin') {
-            window.location.href = "localhost/areaAdmin";
-        }
-        if(getCookie('cargo') == 'cliente') {
-            window.location.href = "localhost/areaCliente";
-        }
+    var username = getCookie('username');
+    var name = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("telefone").value;
+    var password1 = document.getElementById("password1").value;
+    var password2 = document.getElementById("password2").value;
+    var addres = "";
+    var number = "";
+    var complement = "";
+
+    if(getCookie('cargo') == 'Cliente') {
+        addres = document.getElementById("logradouro").value;
+        number = document.getElementById("numbero").value;
+        complement = document.getElementById("complemento").value;
+    }
+    // Validações da entrada
+    if(password1 != password2) {
+        alert("Senhas diferentes, tente novamente!");
+        flag_erro = true;
+        return;
+    }
+    if(name == "" || email == "" || phone == "" || password1 == "") {
+        alert("Algum campo está nulo, tente novamente!");
+        flag_erro = true;
+        return;
     }
 
-    var resposta = {};
-    // Consulta todos os usuários cadastrados para verificar o login
-    axios.get('/getUser').then(resp => {
-        resposta = resp.data;
+    var flag_erro = false;
 
-        // Pega as entradas do usuário
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        var flag = false;
-
-        // Verifica se o usuário cadastrado está na base de dados    
-        for(var i = 0; i < resposta.length; i++) {
-
-            if(resposta[i]['username'] == username && resposta[i]['hash_senha'] == password) {
-
-                // Apaga qualquer cookie que possa existir
-                if(getCookie('username'))
-                    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-                if(getCookie('cart'))
-                    document.cookie = 'cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-                if(getCookie('cargo'))
-                    document.cookie = 'cargo=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-
-                // Login bem sucedido, fazemos um cookie do id do usuário e do seu nome
-                flag = true;
-                // Os cookies duram uma hora no máximo
-                var now = new Date();
-                now.setTime(now.getTime() + 1 * 3600 * 1000);
-                document.cookie = "username="+resposta[i]['username']+"; expires=" + now.toUTCString() + "; path=/";
-                document.cookie = "cargo="+resposta[i]['cargo']+"; expires=" + now.toUTCString() + "; path=/";
-                // O carrinho é configurado como cookie dentro de uma string JSON
-                var cart = [];
-                var cart_json = JSON.stringify(cart);
-                document.cookie = "cart="+cart_json+"; expires=" + now.toUTCString() + "; path=/";
-
-
-                if(resposta[i]['cargo'] == "Admin")
-                    window.location.href = "/areaAdmin";
-                else
-                    window.location.href = "/areaCliente"; 
-            }
+    if(!flag_erro) {
+        if(getCookie('cargo') == 'Admin') {
+            await axios.put('/putUser', { 
+                username: username,
+                nome: name,
+                email: email,
+                telefone: phone,
+                hash_senha: password1,
+            });
         }
-        if(!flag)
-            alert("Não foi possível fazer login, tente novamente!");
-    });
-}
+        else {
+            await axios.put('/putUser', { 
+                username: username,
+                nome: name,
+                email: email,
+                telefone: phone,
+                hash_senha: password1,
+                logradouro: addres,
+                numero: number,
+                complemento: complement,
+                });
+        }
+    
+        // Cria os cookies, que duram uma hora no máximo
+        var data_atual = new Date();
+        data_atual.setTime(data_atual.getTime() + 1 * 3600 * 1000);
+        document.cookie = "username="+username+"; expires=" + data_atual.toUTCString() + "; path=/";
+        document.cookie = "cargo="+cargo+"; expires=" + data_atual.toUTCString() + "; path=/";
+        // O carrinho é configurado como cookie dentro de uma string JSON
+        var cart = [];
+        var cart_json = JSON.stringify(cart);
+        document.cookie = "cart="+cart_json+"; expires=" + data_atual.toUTCString() + "; path=/";
 
-document.getElementById("botao-editar").addEventListener("click", login);
+        alert("Perfil atualizado com sucesso");
+        if(getCookie('cargo') == 'Cliente')
+            window.location.href = "\areaCliente";
+        else
+        window.location.href = "\areaAdmin";
+    }
+}
+document.getElementById("botao-editar").addEventListener("click", processaPerfil);

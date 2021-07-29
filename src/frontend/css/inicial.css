@@ -3,12 +3,12 @@
 .slider-imagens {
     position: relative;
     margin: auto;
-    max-width: 60%;
+    max-width: 60vw;
     height: 400px;
 }
 @media only screen and (max-width: 800px){
 	.slider-imagens {
-		max-width: 80%;
+		max-width: 80vw;
 	}
 }
 

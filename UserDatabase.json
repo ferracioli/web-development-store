@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "610186daf17d2588a7d0937f"
+  },
+  "username": "admin",
+  "nome": "admin",
+  "cargo": "Admin",
+  "email": "admin@admin.com",
+  "logradouro": "casa do admin",
+  "numero": 1,
+  "complemento": "nenhum",
+  "telefone": "40028922",
+  "hash_senha": "admin",
+  "data_cadastro": {
+    "$date": "2012-12-19T06:03:25Z"
+  }
+},{
+  "_id": {
+    "$oid": "6101e7f6f17d2588a7d09380"
+  },
+  "cargo": "Cliente",
+  "complemento": "nenhum",
+  "data_cadastro": {
+    "$date": "2021-07-28T06:03:25Z"
+  },
+  "email": "gabriel@usp.br",
+  "hash_senha": "cliente",
+  "logradouro": "casa do cliente",
+  "nome": [],
+  "numero": 2,
+  "telefone": "12345678",
+  "username": "cliente"
+},{
+  "_id": {
+    "$oid": "6101f35fbdd1ec23b4f4b91f"
+  },
+  "username": "asdsaadas",
+  "nome": "assasass",
+  "email": "asdassads",
+  "telefone": "22332",
+  "hash_senha": "123",
+  "logradouro": "cdsdds",
+  "numero": 2,
+  "complemento": "d",
+  "cargo": "Cliente",
+  "data_cadastro": {
+    "$date": "2021-07-29T00:16:30.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6101f8d6f640692b7011dc57"
+  },
+  "username": "teste",
+  "nome": "teste",
+  "email": "teste",
+  "telefone": "1",
+  "hash_senha": "123",
+  "logradouro": "casa",
+  "numero": 1,
+  "complemento": "teste",
+  "cargo": "Cliente",
+  "data_cadastro": {
+    "$date": "2021-07-29T00:39:49.480Z"
+  },
+  "__v": 0
+}]
