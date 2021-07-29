@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 const path = require("path");
 
+// Classe que gerencia o funcionamento da página
 class App {
   constructor() {
     console.log("Entrou no construtor do app");
@@ -13,17 +14,18 @@ class App {
     this.middlewares();
     this.routes();
     
+    // Usa o express apra rodar o app na porta 8080
     this.express.listen(8080, () => console.log(`API rodando na porta 8080`));
 
-    /* Ensure any requests prefixed with /frontend will serve our "frontend/frontend" directory */
+    // Configuração do caminho relativo para a paginação
     this.express.use("/frontend", express.static(path.resolve(__dirname, "frontend")));
     
-    /* Redirect all routes to our (soon to exist) "index.html" file */
     this.express.get("/*", (req, res) => {
         res.sendFile(path.resolve("src", "index.html"));
     });
   }
   
+  // Usa o link da base local para fazer a comexão com mongoose (usaremos isso para as APIs)
   database() {
     mongoose.connect(db.uri, { useNewUrlParser: true });
   }
@@ -32,6 +34,7 @@ class App {
     this.express.use(express.json());
   }
   
+  // O express é usado para o roteamento da página
   routes() {
     this.express.use(require("./routes"));
   }

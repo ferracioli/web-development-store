@@ -1,3 +1,8 @@
+/*
+    Arquivo que realiza a operação das rotas na página, ela inclui todas as páginas de início, o que faz com
+    que o load inicial seja maior, mas o desempenho da página seja muito melhor no longo prazo.
+*/
+
 // Imports
 import AreaAdmin from "./views/AreaAdmin.js"; 
 import AreaCliente from "./views/AreaCliente.js";
@@ -14,7 +19,6 @@ import ModificarProduto from "./views/ModificarProduto.js";
 import Spotlight from "./views/Spotlight.js";
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
-// pathToRegex("/posts/:id") -> /^\/posts\/(.+)$/
 
 // Roteador
 var routes = [
@@ -62,7 +66,6 @@ const potentialMatches = routes.map(route => {
 let match = potentialMatches.find(potentialMatch => potentialMatch.result !== null);
 
 // Inicia a página
-/* Route not found - return first route OR a specific "not-found" route */
 if (!match) {
     match = {
         route: routes[0],
@@ -86,13 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /* Document has loaded -  run the router! */
     router();
 });
 
 window.addEventListener("popstate", router);
 
-// Continuação
 const getParams = match => {
     const values = match.result.slice(1);
     const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
@@ -105,4 +106,5 @@ const getParams = match => {
 const view = new match.route.view(getParams(match));
 document.querySelector("#app").innerHTML = await view.getHtml();
 
+// Se alguma das rotas possui scripts exclusivos
 await view.executeViewScript();

@@ -77,8 +77,6 @@ export default class extends Views {
 
                 <div class="vertical" id="items"> 
 
-                    <!-- Chama a função que usa a base de dados local (JSON) -->
-                    <script type="module" src="../javascript/Temp/searchProducts.js"></script>  
 
                 </div>
             </div>
@@ -100,5 +98,11 @@ export default class extends Views {
         css2.rel='stylesheet';
         css2.href= "/frontend/css/search.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/Temp/searchProducts.js";
+        document.body.appendChild(script);
+
     }
 }

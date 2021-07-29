@@ -1,5 +1,5 @@
 // Array com a lista de produtos estáticos
-export const products = [
+module.exports = [
     // OBS: repare que as datas de publicação são crescentes, juntamente com o id
     {
         id: 1,
