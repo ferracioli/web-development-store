@@ -1,4 +1,5 @@
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -7,6 +8,9 @@ export default class extends Views {
     }
 
     async getHtml() {
+        if(getCookie('username') == null || getCookie('cargo')=="Admin")
+            window.location.href = "/";
+
         return `
         <div id = "items">
                 <div class="products horizontal"> 
@@ -30,20 +34,20 @@ export default class extends Views {
                         <h2>Informações do pagamento</h2>
                         <text class="text" id="price"></text><br>
                         <label class="text gold">Código do cartão de crédito:</label>
-                        <input style="width:300px;" class="text" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                        <input id="carrinhoCodigo" style="width:300px;" class="text" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
 
                         <label class="text gold">Validade do cartão de crédito:</label>
-                        <input style="width:300px;" class="text" type="text" placeholder="MM/AA" required>
+                        <input id="carrinhoValidade" style="width:300px;" class="text" type="text" placeholder="MM/AA" required>
 
                         <label class="text gold">Código de segurança:</label>
-                        <input style="width:300px;" class="text" type="text" placeholder="abc" required>
+                        <input id="carrinhoSeguranca" style="width:300px;" class="text" type="text" placeholder="abc" required>
+                    </div>
+                    <!-- Botão para finalizar a compra -->
+                    <div id="finalizar">
+                        <button>Finalizar compra</button>
                     </div>
                 </div>
 
-                <!-- Botão para finalizar a compra -->
-                <div id="finalizar">
-                    <button onclick="alert('Parabéns, sua compra foi realizada com sucesso! Em breve você receberá um email com as instruções para a aquisição das skins.');">Finalizar compra</button>
-                </div>
             </div>
 
             <a href="buscaProduto.html" class=simple-button>Continuar comprando</a>
@@ -64,5 +68,10 @@ export default class extends Views {
         css2.rel='stylesheet';
         css2.href= "/frontend/css/carrinho.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/Temp/carrinho.js";
+        document.body.appendChild(script);
     }
 }

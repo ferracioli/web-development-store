@@ -40,5 +40,10 @@ export default class extends Views {
         css2.rel='stylesheet';
         css2.href= "/frontend/css/product.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/Temp/modificarProduto.js";
+        document.body.appendChild(script);
     }
 }

@@ -1,4 +1,5 @@
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -7,6 +8,9 @@ export default class extends Views {
     }
 
     async getHtml() {
+        if(getCookie('username') == null || getCookie('cargo')=="Cliente")
+            window.location.href = "/";
+
         return `
                 <!-- Ferramenta de busca por nome -->
                 <div class="search-container horizontal">

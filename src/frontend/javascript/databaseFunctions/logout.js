@@ -3,6 +3,6 @@ function logout() {
     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     document.cookie = 'cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     document.cookie = 'cargo=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-    window.location.href = "/";
+    window.location.href = "/Login";
 }
 document.getElementById("logout").addEventListener("click", logout);

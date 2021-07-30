@@ -1,6 +1,5 @@
-// frontend/frontend/js/views/Dashboard.js
-//import { set } from "mongoose";
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -9,6 +8,13 @@ export default class extends Views {
     }
 
     async getHtml() {
+
+        if(getCookie('cargo') != null) {
+            if(getCookie('cargo') == 'Admin')
+                window.location.href = "/areaAdmin";
+            else if(getCookie('cargo') == 'Cliente')
+                window.location.href = "/areaCliente";
+        }
 
         return `
             <h1>Faça seu Login!</h1>

@@ -1,4 +1,5 @@
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -7,6 +8,14 @@ export default class extends Views {
     }
 
     async getHtml() {
+
+        if(getCookie('cargo') != null) {
+            if(getCookie('cargo') == 'Admin')
+                window.location.href = "/areaAdmin";
+            else if(getCookie('cargo') == 'Cliente')
+                window.location.href = "/areaCliente";
+        }
+
         return `
         <h1>Faça seu cadastro!</h1>
         <!-- Formulário com todas as informações essenciais dos clientes -->

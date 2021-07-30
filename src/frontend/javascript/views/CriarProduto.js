@@ -1,4 +1,5 @@
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -7,6 +8,9 @@ export default class extends Views {
     }
 
     async getHtml() {
+        if(getCookie('username') == null || getCookie('cargo')=="Cliente")
+            window.location.href = "/";
+
         return `
             <form action="#">
                 <div id="product" class="responsive-div">

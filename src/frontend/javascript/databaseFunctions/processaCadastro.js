@@ -35,6 +35,11 @@ async function cadastro() {
         flag_erro = true;
         return;
     }
+    if(isNaN(number)) {
+        alert("Insira apenas números no campo de número");
+        flag_erro = true;
+        return; 
+    }
 
     var flag_erro = false;
     // Consulta todos os usuários cadastrados para verificar o login

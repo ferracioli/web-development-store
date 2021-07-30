@@ -1,4 +1,5 @@
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -7,6 +8,9 @@ export default class extends Views {
     }
 
     async getHtml() {
+        if(getCookie('username') == null || getCookie('cargo')=="Admin")
+            window.location.href = "/";
+
         return `
             <div class="start-title" style="width: 60vw;">
                 <a class="simple-button" href="javascript:history.go(-1)">Retornar</a>
@@ -42,5 +46,10 @@ export default class extends Views {
         css3.rel='stylesheet';
         css3.href= "/frontend/css/spotlight.css";
         document.getElementsByTagName('head')[0].appendChild(css3);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/Temp/spotlightView.js";
+        document.body.appendChild(script);
     }
 }

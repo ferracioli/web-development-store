@@ -32,7 +32,7 @@ module.exports = [
         jogo: "League of Legends",
         preco: 99.99,
         foto: "cait flip.jpg",
-        spotlight: "AniviaNoxusHunter.mp4",
+        spotlight: "CaitlynFliperama.mp4",
         disponiveis: 1,
         vendidos: 9,
         data_publicacao: "2019-04-28"
@@ -56,7 +56,7 @@ module.exports = [
         jogo: "Overwatch",
         preco: 10.25,
         foto: "ana.png",
-        spotlight: "AniviaNoxusHunter.mp4",
+        spotlight: "Ana.mp4",
         disponiveis: 12,
         vendidos: 3,
         data_publicacao: "2019-06-28"

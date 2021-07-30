@@ -1,4 +1,5 @@
 import Views from "./Views.js";
+import getCookie from "./GetCookie.js";
 
 export default class extends Views {
     constructor(params) {
@@ -7,12 +8,15 @@ export default class extends Views {
     }
 
     async getHtml() {
+        if(getCookie('username') == null || getCookie('cargo')=="Cliente")
+            window.location.href = "/";
+
         return `
             <!-- Ferramenta de busca e de inserção de produto -->
             <div class="search-container horizontal">
                 <!--<form action=#>-->
                     <div class="horizontal">
-                        <a onclick="window.location.href = 'criarProduto.html';" class="spot_edit" >
+                        <a onclick="window.location.href = '/criarProduto';" class="spot_edit" >
                             <div class="search-button horizontal center">
                                 <img src="frontend/img/plus.png"> 
                             </div>
@@ -105,5 +109,10 @@ export default class extends Views {
         css2.rel='stylesheet';
         css2.href= "/frontend/css/search.css";
         document.getElementsByTagName('head')[0].appendChild(css2);
+
+        var script = document.createElement('script');
+        script.type='text/javascript';
+        script.src= "/frontend/javascript/Temp/productsCRUD.js";
+        document.body.appendChild(script);
     }
 }
